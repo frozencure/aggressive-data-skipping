@@ -1,0 +1,33 @@
+plugins {
+	id 'org.springframework.boot' version '2.2.1.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+	id 'java'
+}
+
+group = 'ovgu'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile('org.apache.spark:spark-core_2.12:2.4.4') {
+//		exclude group: 'org.slf4j'
+//		exclude group: 'log4j', module: 'log4j'
+	}
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+//	compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.2.0.RELEASE'
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+}
+
+configurations {
+	all*.exclude module : 'spring-boot-starter-logging'
+}
+
+test {
+	useJUnitPlatform()
+}
