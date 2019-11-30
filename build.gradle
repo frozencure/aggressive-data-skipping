@@ -24,6 +24,15 @@ dependencies {
 	}
 }
 
+jar {
+    manifest {
+        attributes 'Main-Class': 'ovgu.aggressivedataskipping.AggressiveDataSkippingApplication'
+    }
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
 configurations {
 	all*.exclude module : 'spring-boot-starter-logging'
 }
