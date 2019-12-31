@@ -18,6 +18,7 @@ dependencies {
 	implementation 'org.json:json:20190722'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.apache.livy:livy-client-http:0.6.0-incubating'
+	implementation 'com.spring4all:swagger-spring-boot-starter:1.9.0.RELEASE'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
