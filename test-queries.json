@@ -12,7 +12,7 @@
 				{
 					"operator": "<=",
 					"columnName": "l_quantity",
-					"value": "9 + 10"
+					"value": "19"
 				},
 				{
 					"operator": "in",
@@ -38,7 +38,7 @@
 				{
 					"operator": "<=",
 					"columnName": "l_quantity",
-					"value": "15 + 10"
+					"value": "25"
 				},
 				{
 					"operator": "in",

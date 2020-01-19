@@ -1,20 +1,18 @@
 package ovgu.aggressivedataskipping.featurization;
 
-import java.util.regex.Pattern;
-
 public enum OperatorType {
 
     RANGE("\\<\\=?|\\>\\=?"),
     EQUALITY("\\="),
-    IN("\\in");
+    IN("in");
 
-    private final Pattern pattern;
+    private final String pattern;
 
-    private OperatorType(final String regex) {
-        this.pattern = Pattern.compile(regex);
+    OperatorType(final String regex) {
+        this.pattern = regex;
     }
 
-    public Pattern getPattern() {
+    public String getPattern() {
         return pattern;
     }
 }

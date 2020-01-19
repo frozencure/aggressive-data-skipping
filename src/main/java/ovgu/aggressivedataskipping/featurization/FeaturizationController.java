@@ -22,7 +22,7 @@ public class FeaturizationController {
     @GetMapping("/read")
     public String readQueries(@RequestParam String queriesPath) {
         try {
-            return service.readQueries(queriesPath);
+            return service.augmentQueries(queriesPath).toString();
         } catch (FileNotFoundException e) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Queries file not found");
         }

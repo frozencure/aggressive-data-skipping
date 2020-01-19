@@ -15,12 +15,12 @@ public class WorkloadReader {
         this.workloadPath = workloadPath;
     }
 
-    public String readQueries() throws FileNotFoundException {
+    public QuerySet readQueries() throws FileNotFoundException {
         Reader reader = new FileReader(workloadPath);
         JsonReader jsonReader = new JsonReader(reader);
         Gson gson = new Gson();
         QuerySet querySet = gson.fromJson(jsonReader, QuerySet.class);
-        return querySet.queries.get(0).toString();
+        return querySet;
     }
 
 
