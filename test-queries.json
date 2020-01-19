@@ -1,0 +1,56 @@
+{
+	"queries": [
+		{
+			"filename": "393_generated.sql",
+			"id": 1,
+			"predicates": [
+				{
+					"operator": ">=",
+					"columnName": "l_quantity",
+					"value": "9"
+				},
+				{
+					"operator": "<=",
+					"columnName": "l_quantity",
+					"value": "9 + 10"
+				},
+				{
+					"operator": "in",
+					"columnName": "l_shipmode",
+					"value": "('AIR', 'AIR REG')"
+				},
+				{
+					"operator": "=",
+					"columnName": "l_shipinstruct",
+					"value": "'DELIVER IN PERSON'"
+				}
+			]
+		},
+		{
+			"filename": "393_generated.sql",
+			"id": 2,
+			"predicates": [
+				{
+					"operator": ">=",
+					"columnName": "l_quantity",
+					"value": "15"
+				},
+				{
+					"operator": "<=",
+					"columnName": "l_quantity",
+					"value": "15 + 10"
+				},
+				{
+					"operator": "in",
+					"columnName": "l_shipmode",
+					"value": "('AIR', 'AIR REG')"
+				},
+				{
+					"operator": "=",
+					"columnName": "l_shipinstruct",
+					"value": "'DELIVER IN PERSON'"
+				}
+			]
+		}
+	]
+}
