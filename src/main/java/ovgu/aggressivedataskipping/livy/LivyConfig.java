@@ -20,7 +20,7 @@ public class LivyConfig {
     private String tempJarPath;
 
     @Value("${spark.livy.classpath}")
-    private String jarClassPath;
+    private String[] jarClassPaths;
 
     @Bean
     public LivyClient livyClient() throws IOException, URISyntaxException {
@@ -32,7 +32,7 @@ public class LivyConfig {
 
     @Bean
     public JarCreator jarCreator() {
-        return new JarCreator(jarClassPath, tempJarPath);
+        return new JarCreator(jarClassPaths, tempJarPath);
     }
 
 }
