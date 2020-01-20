@@ -1,4 +1,4 @@
-package ovgu.aggressivedataskipping.featurization;
+package ovgu.aggressivedataskipping.featurization.models;
 
 import java.util.Objects;
 import java.util.regex.Pattern;
@@ -38,6 +38,22 @@ public class Predicate {
             return OperatorType.IN;
         }
         return null;
+    }
+
+    private boolean isSubsumedEquality() {
+        return false;
+    }
+
+    private boolean isSubsumedRange(Predicate otherPredicate) {
+//        if(operator.equals("<") && otherPredicate.operator.equals("<")) return value.compareTo(otherPredicate.value);
+//        if(operator.equals("<") && otherPredicate.operator.equals("<=")) return value <= otherPredicate.value;
+//        if(operator.equals("<=") && otherPredicate.operator.equals("<=")) return value < otherPredicate.value;
+//        if(operator.equals("<=") && otherPredicate.operator.equals("<")) return value < otherPredicate.value;
+//        if(operator.equals(">") && otherPredicate.operator.equals(">")) return value > otherPredicate.value;
+//        if(operator.equals(">") && otherPredicate.operator.equals(">=")) return value >= otherPredicate.value;
+//        if(operator.equals(">=") && otherPredicate.operator.equals(">=")) return value > otherPredicate.value;
+//        if(operator.equals(">=") && otherPredicate.operator.equals(">")) return value > otherPredicate.value;
+        return false;
     }
 
     public boolean isSubsumed(Predicate otherPredicate) {

@@ -1,4 +1,4 @@
-package ovgu.aggressivedataskipping.featurization;
+package ovgu.aggressivedataskipping.featurization.models;
 
 public enum OperatorType {
 

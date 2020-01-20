@@ -1,11 +1,13 @@
 package ovgu.aggressivedataskipping.featurization;
 
 import org.springframework.stereotype.Service;
+import ovgu.aggressivedataskipping.featurization.models.Predicate;
+import ovgu.aggressivedataskipping.featurization.models.Query;
+import ovgu.aggressivedataskipping.featurization.models.QuerySet;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 @Service
 public class FeaturizationService {
@@ -18,7 +20,7 @@ public class FeaturizationService {
     public QuerySet augmentQueries(String queriesFile) throws FileNotFoundException {
         QuerySet querySet = readQueries(queriesFile);
         Set<Predicate> allPredicates = querySet.getAllPredicates();
-        ArrayList<Query> allQueries = querySet.queries;
+        ArrayList<Query> allQueries = querySet.getQueries();
         allPredicates.forEach(p -> {
             allQueries.forEach(q -> {
                 ArrayList<Predicate> toAddPredicates = new ArrayList<>();

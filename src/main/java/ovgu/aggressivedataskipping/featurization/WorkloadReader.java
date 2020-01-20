@@ -2,6 +2,7 @@ package ovgu.aggressivedataskipping.featurization;
 
 import com.google.gson.*;
 import com.google.gson.stream.JsonReader;
+import ovgu.aggressivedataskipping.featurization.models.QuerySet;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;

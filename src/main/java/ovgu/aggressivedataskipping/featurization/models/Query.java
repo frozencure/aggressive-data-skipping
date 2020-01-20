@@ -1,7 +1,6 @@
-package ovgu.aggressivedataskipping.featurization;
+package ovgu.aggressivedataskipping.featurization.models;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Query {
 
