@@ -8,8 +8,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
+import ovgu.aggressivedataskipping.featurization.models.QuerySet;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 
 @RestController
 @RequestMapping("/featurization")
@@ -20,11 +22,14 @@ public class FeaturizationController {
     private FeaturizationService service;
 
     @GetMapping("/read")
-    public String readQueries(@RequestParam String queriesPath) {
+    public void readQueries(@RequestParam String queriesPath, @RequestParam String outputPath) {
         try {
-            return service.augmentQueries(queriesPath).toString();
+            QuerySet queries = service.augmentQueries(queriesPath);
+            service.writeQueriesToFile(queries, outputPath);
         } catch (FileNotFoundException e) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Queries file not found");
+        } catch (IOException e) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Output path does not exist");
         }
     }
 

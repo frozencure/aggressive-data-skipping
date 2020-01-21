@@ -6,6 +6,7 @@ import ovgu.aggressivedataskipping.featurization.models.Query;
 import ovgu.aggressivedataskipping.featurization.models.QuerySet;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Set;
 
@@ -36,8 +37,9 @@ public class FeaturizationService {
         return querySet;
     }
 
-//    public QuerySet aprioriMining(QuerySet inputQuerySet) {
-//
-//    }
+    public void writeQueriesToFile(QuerySet querySet, String output) throws IOException {
+        WorkloadWriter wr = new WorkloadWriter();
+        wr.writeQueries(querySet, output);
+    }
 
 }
