@@ -36,12 +36,24 @@ public class AprioriMiner<T> {
         return true;
     }
 
+    private int getItemSetFrequency(Set<T> itemSet) {
+        int minItemCount = Integer.MAX_VALUE;
+        for (T item : itemSet) {
+            int itemCount = 0;
+            for (Set<T> transaction : transactions) {
+                if (transaction.contains(item)) itemCount++;
+            }
+            if (itemCount <= minItemCount) minItemCount = itemCount;
+        }
+        return minItemCount;
+    }
+
     private Set<Set<T>> combinations(Set<T> items, int k) {
         return Sets.combinations(items, k);
     }
 
-    public Set<Set<T>> getItemSets() {
-        Set<Set<T>> finalItemSets = new HashSet<>();
+    public Map<Set<T>, Integer> getFrequentItemSets() {
+        Map<Set<T>, Integer> finalItemSets = new HashMap<>();
         int k = 2;
         Set<T> items = itemsWithCounts.keySet()
                 .stream().filter(a -> itemsWithCounts.get(a) >= support)
@@ -50,13 +62,13 @@ public class AprioriMiner<T> {
             Set<T> set = new HashSet<T>();
             set.add(i);
             return set;
-        }).forEach(finalItemSets::add);
+        }).forEach(s -> finalItemSets.put(s, getItemSetFrequency(s)));
         while (true) {
             if (items.isEmpty()) break;
             Set<Set<T>> itemSets = combinations(items, k);
             itemSets = itemSets.stream().filter(this::isFrequent).collect(Collectors.toSet());
             if (itemSets.isEmpty()) break;
-            finalItemSets.addAll(itemSets);
+            itemSets.forEach(s -> finalItemSets.put(s, getItemSetFrequency(s)));
             if (k == items.size()) break;
             k++;
         }

@@ -1,4 +1,4 @@
-package ovgu.aggressivedataskipping.queries;
+package ovgu.aggressivedataskipping.parsing;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

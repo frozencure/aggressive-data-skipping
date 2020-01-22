@@ -1,14 +1,18 @@
 package ovgu.aggressivedataskipping.featurization.models;
 
-import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class QuerySet {
 
-    ArrayList<Query> queries;
+    List<Query> queries;
 
-    public ArrayList<Query> getQueries() {
+    public QuerySet(List<Query> queries) {
+        this.queries = queries;
+    }
+
+    public List<Query> getQueries() {
         return queries;
     }
 

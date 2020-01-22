@@ -46,7 +46,7 @@ public class Predicate {
         PredicateValueParser parser = new PredicateValueParser();
         Set<String> thisSet = parser.parseSet(value);
         Set<String> otherSet = parser.parseSet(otherPredicate.value);
-        return !thisSet.equals(otherSet) && thisSet.containsAll(otherSet);
+        return otherSet.containsAll(thisSet);
     }
 
     private boolean isSubsumedRange(Predicate otherPredicate) {
@@ -54,21 +54,21 @@ public class Predicate {
         Comparable thisValue = parser.getParsedValue(value);
         Comparable otherValue = parser.getParsedValue(otherPredicate.value);
         if(!thisValue.getClass().equals(otherValue.getClass())) return false;
-        if(operator.equals("<") && otherPredicate.operator.equals("<")) return thisValue.compareTo(otherValue) < 0;
+        if(operator.equals("<") && otherPredicate.operator.equals("<")) return thisValue.compareTo(otherValue) <= 0;
         if(operator.equals("<") && otherPredicate.operator.equals("<=")) return thisValue.compareTo(otherValue) <= 0;
-        if(operator.equals("<=") && otherPredicate.operator.equals("<=")) return thisValue.compareTo(otherValue) < 0;
-        if(operator.equals("<=") && otherPredicate.operator.equals("<")) return thisValue.compareTo(otherValue) < 0;
-        if(operator.equals(">") && otherPredicate.operator.equals(">")) return thisValue.compareTo(otherValue) > 0;
+        if(operator.equals("<=") && otherPredicate.operator.equals("<=")) return thisValue.compareTo(otherValue) <= 0;
+        if(operator.equals("<=") && otherPredicate.operator.equals("<")) return thisValue.compareTo(otherValue) <= 0;
+        if(operator.equals(">") && otherPredicate.operator.equals(">")) return thisValue.compareTo(otherValue) >= 0;
         if(operator.equals(">") && otherPredicate.operator.equals(">=")) return thisValue.compareTo(otherValue) >= 0;
-        if(operator.equals(">=") && otherPredicate.operator.equals(">=")) return thisValue.compareTo(otherValue) > 0;
-        if(operator.equals(">=") && otherPredicate.operator.equals(">")) return thisValue.compareTo(otherValue) > 0;
+        if(operator.equals(">=") && otherPredicate.operator.equals(">=")) return thisValue.compareTo(otherValue) >= 0;
+        if(operator.equals(">=") && otherPredicate.operator.equals(">")) return thisValue.compareTo(otherValue) >= 0;
         return false;
     }
 
     public boolean isSubsumed(Predicate otherPredicate) {
         if(!this.columnName.equals(otherPredicate.columnName)) return false;
         if(!this.getOperatorType().equals(otherPredicate.getOperatorType())) return false;
-        if(getOperatorType().equals(OperatorType.EQUALITY)) return false;
+        if(getOperatorType().equals(OperatorType.EQUALITY)) return this.equals(otherPredicate);
         if(getOperatorType().equals(OperatorType.IN)) return isSubsumedSet(otherPredicate);
         if(getOperatorType().equals(OperatorType.RANGE)) return isSubsumedRange(otherPredicate);
         return false;

@@ -1,12 +1,15 @@
 package ovgu.aggressivedataskipping.featurization;
 
-import com.google.gson.*;
+import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
+import ovgu.aggressivedataskipping.featurization.models.Query;
 import ovgu.aggressivedataskipping.featurization.models.QuerySet;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.Reader;
+import java.util.Arrays;
+import java.util.List;
 
 public class WorkloadReader {
 
@@ -20,10 +23,9 @@ public class WorkloadReader {
         Reader reader = new FileReader(workloadPath);
         JsonReader jsonReader = new JsonReader(reader);
         Gson gson = new Gson();
-        QuerySet querySet = gson.fromJson(jsonReader, QuerySet.class);
-        return querySet;
+        List<Query> queries = Arrays.asList(gson.fromJson(jsonReader, Query[].class));
+        return new QuerySet(queries);
     }
-
 
 
 }

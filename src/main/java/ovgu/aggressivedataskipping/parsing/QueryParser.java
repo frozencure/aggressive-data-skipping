@@ -1,4 +1,4 @@
-package ovgu.aggressivedataskipping.queries;
+package ovgu.aggressivedataskipping.parsing;
 
 import net.sf.jsqlparser.JSQLParserException;
 import net.sf.jsqlparser.expression.BinaryExpression;
@@ -9,11 +9,11 @@ import net.sf.jsqlparser.expression.operators.conditional.OrExpression;
 import net.sf.jsqlparser.expression.operators.relational.ComparisonOperator;
 import net.sf.jsqlparser.expression.operators.relational.InExpression;
 import net.sf.jsqlparser.parser.CCJSqlParserUtil;
+import org.apache.commons.io.FileUtils;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.nio.file.Path;
 import java.time.LocalDate;
 
 import java.io.*;
@@ -56,7 +56,7 @@ public class QueryParser {
 
         Hashtable<String, JSONObject> Dict = new Hashtable<>();
         JSONArray JSONMain = new JSONArray();
-        Path outputPath = null;
+        File outputFile = null;
         //atleast one file in the folder
         if (listOfFiles != null) {
             for (File file : listOfFiles) {
@@ -106,9 +106,12 @@ public class QueryParser {
                 }
             }
             System.out.println(outarray);
-            outputPath = Files.write(Paths.get(output), (outarray).toString().getBytes());     //json format output
+//            JSONObject topLevel = new JSONObject();
+//            topLevel.append("queries", outarray);
+            outputFile = new File(output);
+            FileUtils.writeStringToFile(outputFile, outarray.toString());//json format output
         }
-        return outputPath.toAbsolutePath().toString();
+        return outputFile.getAbsolutePath();
     }
 
     /**
@@ -173,7 +176,7 @@ public class QueryParser {
                 }
                 if (expr instanceof OrExpression) {
                     try {
-                        getANDPredicates(expr, Filename);
+                        getORPredicates(expr, Filename);
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
