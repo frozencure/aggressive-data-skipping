@@ -27,4 +27,9 @@ public class CostMatrixCell {
     public Integer getCost() {
         return cost;
     }
+
+
+    public void setCost(Integer cost) {
+        this.cost = cost;
+    }
 }
