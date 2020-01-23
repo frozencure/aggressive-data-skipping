@@ -2,6 +2,7 @@ package ovgu.aggressivedataskipping.augmentation;
 
 import org.apache.livy.Job;
 import org.apache.livy.JobContext;
+import org.apache.spark.sql.Column;
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
 import org.apache.spark.sql.SQLContext;

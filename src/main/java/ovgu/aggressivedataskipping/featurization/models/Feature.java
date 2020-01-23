@@ -14,21 +14,18 @@ public class Feature {
         this.frequency = frequency;
     }
 
-    public Integer isSubsumed(Feature otherFeature) {
-        if(predicates.equals(otherFeature.predicates)) {
-            return 0;
-        }
-        for(Predicate predicate: predicates) {
+    public boolean isSubsumed(Feature otherFeature) {
+        for(Predicate otherPredicate: otherFeature.getPredicates()) {
             boolean isSubsumed = false;
-            for(Predicate otherPredicate: otherFeature.getPredicates()) {
+            for(Predicate predicate: predicates) {
                 if(predicate.isSubsumed(otherPredicate)) {
                     isSubsumed = true;
                     break;
                 }
             }
-            if(isSubsumed) return 1;
+            if(!isSubsumed) return false;
         }
-        return -1;
+        return true;
     }
 
     public ArrayList<Predicate> getPredicates() {
