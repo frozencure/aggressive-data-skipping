@@ -7,6 +7,7 @@ import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PreDestroy;
 import java.io.File;
 import java.util.concurrent.ExecutionException;
 
@@ -17,9 +18,9 @@ public class LivyInitializer {
 
     private final JarCreator jarCreator;
 
-    private final LivyClient livyClient;
+    private final LivyClientWrapper livyClient;
 
-    public LivyInitializer(JarCreator jarCreator, LivyClient livyClient) {
+    public LivyInitializer(JarCreator jarCreator, LivyClientWrapper livyClient) {
         this.jarCreator = jarCreator;
         this.livyClient = livyClient;
     }
@@ -27,7 +28,7 @@ public class LivyInitializer {
     @EventListener(ApplicationReadyEvent.class)
     public void uploadJars() throws ExecutionException, InterruptedException {
         jarCreator.createJar();
-        LOGGER.debug("Uploading %s to the Spark context...\n", jarCreator.getJarPath());
-        livyClient.uploadJar(new File(jarCreator.getJarPath())).get();
+        LOGGER.info("Uploading %s to the Spark context...\n", jarCreator.getJarPath());
+        livyClient.getLivyClient().uploadJar(new File(jarCreator.getJarPath())).get();
     }
 }

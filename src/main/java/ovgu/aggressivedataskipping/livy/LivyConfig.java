@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import javax.annotation.PreDestroy;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -23,11 +24,11 @@ public class LivyConfig {
     private String[] jarClassPaths;
 
     @Bean
-    public LivyClient livyClient() throws IOException, URISyntaxException {
+    public LivyClientWrapper livyClient() throws IOException, URISyntaxException {
         LivyClient client = new LivyClientBuilder()
                 .setURI(new URI(livyUrl))
                 .build();
-        return client;
+        return new LivyClientWrapper(client);
     }
 
     @Bean

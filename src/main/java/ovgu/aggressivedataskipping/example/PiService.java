@@ -2,20 +2,21 @@ package ovgu.aggressivedataskipping.example;
 
 import org.apache.livy.LivyClient;
 import org.springframework.stereotype.Service;
+import ovgu.aggressivedataskipping.livy.LivyClientWrapper;
 
 import java.util.concurrent.ExecutionException;
 
 @Service
 public class PiService {
 
-    final LivyClient client;
+    final LivyClientWrapper client;
 
-    public PiService(LivyClient client) {
+    public PiService(LivyClientWrapper client) {
         this.client = client;
     }
 
     public double estimatePi(int samples) throws ExecutionException, InterruptedException {
-        return client.submit(new PiJob(samples)).get();
+        return client.getLivyClient().submit(new PiJob(samples)).get();
     }
 
 }
