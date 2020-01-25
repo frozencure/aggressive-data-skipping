@@ -1,10 +1,14 @@
 package ovgu.aggressivedataskipping.augmentation;
 
-import org.apache.livy.LivyClient;
 import org.springframework.stereotype.Service;
+import ovgu.aggressivedataskipping.featurization.models.Feature;
+import ovgu.aggressivedataskipping.featurization.models.FeatureSet;
 import ovgu.aggressivedataskipping.livy.LivyClientWrapper;
 
+import java.io.FileNotFoundException;
+import java.util.List;
 import java.util.concurrent.ExecutionException;
+import java.util.stream.Collectors;
 
 @Service
 public class AugmentationService {
@@ -15,8 +19,12 @@ public class AugmentationService {
         this.client = client;
     }
 
-    public long testAugmentation() throws ExecutionException, InterruptedException {
-        return client.getLivyClient().submit(new AugmentationJob()).get();
+    public long testAugmentation(String featuresPath) throws ExecutionException, InterruptedException, FileNotFoundException {
+        FeatureReader reader = new FeatureReader(featuresPath);
+        FeatureSet featureSet = reader.readFeatures();
+        List<String> featuresAsConditions = featureSet.getFeatures()
+                .stream().map(Feature::getFeatureAsCondition).collect(Collectors.toList());
+        return client.getLivyClient().submit(new AugmentationJob(featuresAsConditions)).get();
     }
 
 }

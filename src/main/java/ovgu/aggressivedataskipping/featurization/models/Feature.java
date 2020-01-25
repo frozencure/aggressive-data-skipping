@@ -15,15 +15,15 @@ public class Feature {
     }
 
     public boolean isSubsumed(Feature otherFeature) {
-        for(Predicate otherPredicate: otherFeature.getPredicates()) {
+        for (Predicate otherPredicate : otherFeature.getPredicates()) {
             boolean isSubsumed = false;
-            for(Predicate predicate: predicates) {
-                if(predicate.isSubsumed(otherPredicate)) {
+            for (Predicate predicate : predicates) {
+                if (predicate.isSubsumed(otherPredicate)) {
                     isSubsumed = true;
                     break;
                 }
             }
-            if(!isSubsumed) return false;
+            if (!isSubsumed) return false;
         }
         return true;
     }
@@ -52,4 +52,12 @@ public class Feature {
     public int hashCode() {
         return Objects.hash(predicates);
     }
+
+    public String getFeatureAsCondition() {
+        return predicates.stream().map(Predicate::getAsCondition)
+                .reduce((a, b) -> a + " AND " + b).<IllegalStateException>orElseThrow(() -> {
+                    throw new IllegalStateException("List cannot be empty");
+                });
+    }
+
 }

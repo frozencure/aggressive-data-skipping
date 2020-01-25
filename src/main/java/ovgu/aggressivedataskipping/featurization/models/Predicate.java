@@ -78,4 +78,17 @@ public class Predicate {
     public int hashCode() {
         return Objects.hash(columnName, operator, value);
     }
+
+    @Override
+    public String toString() {
+        return "Predicate{" +
+                "columnName='" + columnName + '\'' +
+                ", operator='" + operator + '\'' +
+                ", value='" + value + '\'' +
+                '}';
+    }
+
+    public String getAsCondition() {
+        return columnName + operator + value;
+    }
 }
