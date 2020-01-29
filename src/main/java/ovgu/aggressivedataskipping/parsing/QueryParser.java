@@ -69,7 +69,7 @@ public class QueryParser {
                 if (file_content.contains(table)) {
                     while ((st = br.readLine()) != null)
                         if (cnt == 0) {
-                            if (st.startsWith("where")) {
+                            if (st.toLowerCase().startsWith("where")) {
                                 cnt += 1;
                             }
                         } else if (!st.startsWith("go") && !st.startsWith("group") && !st.startsWith("order") && !st.startsWith("set")) {

@@ -18,14 +18,14 @@ public class FeaturizationMain {
     public static void main(String...args) throws IOException {
         FeaturizationService service = new FeaturizationService();
         QuerySet queries = service
-                .augmentQueries("E:\\Documente\\master\\Sem III\\DBSE Project\\aggressive-data-skipping\\queries.json");
-        FeatureSet featureSet = service.getFrequentItemSets(new HashSet<>(queries.getQueries()), 4);
+                .augmentQueries("E:\\Documente\\master\\Sem III\\DBSE Project\\aggressive-data-skipping\\more-queries.json");
+        FeatureSet featureSet = service.getFrequentItemSets(new HashSet<>(queries.getQueries()), 20);
 //        Gson gson = new GsonBuilder().disableHtmlEscaping().create();
 //        String json = gson.toJson(queries, QuerySet.class);
 //        FileUtils.writeStringToFile(new File("aug-output.json"), json);
 //        service.writeQueriesToFile(featureSet, "aug-test.json");
         RedundantPredicatesRemover remover =
-                new RedundantPredicatesRemover(featureSet.getFeatures(), new HashSet<>(queries.getQueries()), 4);
+                new RedundantPredicatesRemover(featureSet.getFeatures(), new HashSet<>(queries.getQueries()), 20);
         List<Feature> remainingFeatures = remover.removeRedundantFeatures();
         System.out.println(remainingFeatures);
 //        Integer[] a =  {1,2,3,4,5};

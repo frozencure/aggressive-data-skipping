@@ -1,0 +1,3647 @@
+[
+    {
+        "predicates": [
+            {
+                "value": "1997-08-22",
+                "operator": ">=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "'COLLECT COD'",
+                "operator": "=",
+                "columnName": "l_shipinstruct"
+            },
+            {
+                "value": "1996-02-09",
+                "operator": ">=",
+                "columnName": "l_commitdate"
+            },
+            {
+                "value": "83980",
+                "operator": "<=",
+                "columnName": "l_extendedprice"
+            },
+            {
+                "value": "'A'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            }
+        ],
+        "FileName": "Generated_Query_10.sql",
+        "id": 1
+    },
+    {
+        "predicates": [
+            {
+                "value": "16",
+                "operator": "<=",
+                "columnName": "l_quantity"
+            },
+            {
+                "value": "'TAKE BACK RETURN'",
+                "operator": "=",
+                "columnName": "l_shipinstruct"
+            },
+            {
+                "value": "2175",
+                "operator": ">=",
+                "columnName": "l_extendedprice"
+            },
+            {
+                "value": "1993-06-24",
+                "operator": "<=",
+                "columnName": "l_receiptdate"
+            },
+            {
+                "value": "1",
+                "operator": ">=",
+                "columnName": "l_linenumber"
+            },
+            {
+                "value": "167742",
+                "operator": "<=",
+                "columnName": "l_partkey"
+            },
+            {
+                "value": "3488971",
+                "operator": ">=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "'F'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            }
+        ],
+        "FileName": "Generated_Query_100.sql",
+        "id": 2
+    },
+    {
+        "predicates": [
+            {
+                "value": "4164033",
+                "operator": ">=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "96157",
+                "operator": ">=",
+                "columnName": "l_extendedprice"
+            },
+            {
+                "value": "'F'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            },
+            {
+                "value": "'DELIVER IN PERSON'",
+                "operator": "=",
+                "columnName": "l_shipinstruct"
+            },
+            {
+                "value": "32",
+                "operator": "<=",
+                "columnName": "l_quantity"
+            }
+        ],
+        "FileName": "Generated_Query_11.sql",
+        "id": 3
+    },
+    {
+        "predicates": [
+            {
+                "value": "1993-01-09",
+                "operator": "<=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "48",
+                "operator": "<=",
+                "columnName": "l_quantity"
+            },
+            {
+                "value": "'F'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            },
+            {
+                "value": "'R'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            },
+            {
+                "value": "1996-09-27",
+                "operator": "<=",
+                "columnName": "l_receiptdate"
+            },
+            {
+                "value": "4220",
+                "operator": "<=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "'COLLECT COD'",
+                "operator": "=",
+                "columnName": "l_shipinstruct"
+            },
+            {
+                "value": "2980032",
+                "operator": "<=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "1996-08-22",
+                "operator": "<=",
+                "columnName": "l_commitdate"
+            },
+            {
+                "value": "'REG AIR'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            }
+        ],
+        "FileName": "Generated_Query_12.sql",
+        "id": 4
+    },
+    {
+        "predicates": [
+            {
+                "value": "1994-11-07",
+                "operator": "<=",
+                "columnName": "l_receiptdate"
+            },
+            {
+                "value": "'N'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            },
+            {
+                "value": "'O'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            },
+            {
+                "value": "1965292",
+                "operator": ">=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "27",
+                "operator": ">=",
+                "columnName": "l_quantity"
+            },
+            {
+                "value": "64375",
+                "operator": ">=",
+                "columnName": "l_extendedprice"
+            },
+            {
+                "value": "6",
+                "operator": ">=",
+                "columnName": "l_linenumber"
+            },
+            {
+                "value": "37225",
+                "operator": "<=",
+                "columnName": "l_partkey"
+            },
+            {
+                "value": "3439",
+                "operator": ">=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "'TAKE BACK RETURN'",
+                "operator": "=",
+                "columnName": "l_shipinstruct"
+            },
+            {
+                "value": "1995-09-07",
+                "operator": ">=",
+                "columnName": "l_shipdate"
+            }
+        ],
+        "FileName": "Generated_Query_13.sql",
+        "id": 5
+    },
+    {
+        "predicates": [
+            {
+                "value": "'TRUCK'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            },
+            {
+                "value": "1801278",
+                "operator": "<=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "8181",
+                "operator": "<=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "1998-10-27",
+                "operator": ">=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "'COLLECT COD'",
+                "operator": "=",
+                "columnName": "l_shipinstruct"
+            },
+            {
+                "value": "28",
+                "operator": "<=",
+                "columnName": "l_quantity"
+            },
+            {
+                "value": "'N'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            }
+        ],
+        "FileName": "Generated_Query_14.sql",
+        "id": 6
+    },
+    {
+        "predicates": [
+            {
+                "value": "1849",
+                "operator": "<=",
+                "columnName": "l_partkey"
+            },
+            {
+                "value": "5845537",
+                "operator": "<=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "1995-10-12",
+                "operator": "<=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "'REG AIR'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            },
+            {
+                "value": "21356",
+                "operator": "<=",
+                "columnName": "l_extendedprice"
+            },
+            {
+                "value": "1995-12-14",
+                "operator": "<=",
+                "columnName": "l_commitdate"
+            },
+            {
+                "value": "'N'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            },
+            {
+                "value": "'O'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            }
+        ],
+        "FileName": "Generated_Query_16.sql",
+        "id": 7
+    },
+    {
+        "predicates": [
+            {
+                "value": "25",
+                "operator": ">=",
+                "columnName": "l_quantity"
+            },
+            {
+                "value": "25960",
+                "operator": ">=",
+                "columnName": "l_extendedprice"
+            },
+            {
+                "value": "'F'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            },
+            {
+                "value": "'DELIVER IN PERSON'",
+                "operator": "=",
+                "columnName": "l_shipinstruct"
+            },
+            {
+                "value": "6",
+                "operator": ">=",
+                "columnName": "l_linenumber"
+            },
+            {
+                "value": "1996-08-25",
+                "operator": ">=",
+                "columnName": "l_commitdate"
+            },
+            {
+                "value": "'RAIL'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            },
+            {
+                "value": "2214826",
+                "operator": ">=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "1994-07-10",
+                "operator": ">=",
+                "columnName": "l_receiptdate"
+            },
+            {
+                "value": "6129",
+                "operator": ">=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "1992-09-06",
+                "operator": "<=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "'R'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            },
+            {
+                "value": "125006",
+                "operator": "<=",
+                "columnName": "l_partkey"
+            }
+        ],
+        "FileName": "Generated_Query_17.sql",
+        "id": 8
+    },
+    {
+        "predicates": [
+            {
+                "value": "1998-03-15",
+                "operator": "<=",
+                "columnName": "l_receiptdate"
+            },
+            {
+                "value": "5",
+                "operator": "<=",
+                "columnName": "l_linenumber"
+            }
+        ],
+        "FileName": "Generated_Query_18.sql",
+        "id": 9
+    },
+    {
+        "predicates": [
+            {
+                "value": "1992-09-28",
+                "operator": ">=",
+                "columnName": "l_receiptdate"
+            },
+            {
+                "value": "98557",
+                "operator": ">=",
+                "columnName": "l_partkey"
+            },
+            {
+                "value": "'RAIL'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            }
+        ],
+        "FileName": "Generated_Query_19.sql",
+        "id": 10
+    },
+    {
+        "predicates": [
+            {
+                "value": "1918",
+                "operator": "<=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "97326",
+                "operator": "<=",
+                "columnName": "l_extendedprice"
+            },
+            {
+                "value": "4692423",
+                "operator": ">=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "'DELIVER IN PERSON'",
+                "operator": "=",
+                "columnName": "l_shipinstruct"
+            },
+            {
+                "value": "1992-04-13",
+                "operator": "<=",
+                "columnName": "l_commitdate"
+            },
+            {
+                "value": "8",
+                "operator": ">=",
+                "columnName": "l_quantity"
+            },
+            {
+                "value": "2",
+                "operator": ">=",
+                "columnName": "l_linenumber"
+            }
+        ],
+        "FileName": "Generated_Query_2.sql",
+        "id": 11
+    },
+    {
+        "predicates": [
+            {
+                "value": "2747",
+                "operator": ">=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "'O'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            },
+            {
+                "value": "'R'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            },
+            {
+                "value": "1996-10-28",
+                "operator": ">=",
+                "columnName": "l_receiptdate"
+            },
+            {
+                "value": "4838596",
+                "operator": "<=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "2",
+                "operator": "<=",
+                "columnName": "l_quantity"
+            },
+            {
+                "value": "1998-10-09",
+                "operator": ">=",
+                "columnName": "l_shipdate"
+            }
+        ],
+        "FileName": "Generated_Query_20.sql",
+        "id": 12
+    },
+    {
+        "predicates": [
+            {
+                "value": "'R'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            },
+            {
+                "value": "5872083",
+                "operator": ">=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "1996-05-30",
+                "operator": "<=",
+                "columnName": "l_receiptdate"
+            }
+        ],
+        "FileName": "Generated_Query_21.sql",
+        "id": 13
+    },
+    {
+        "predicates": [
+            {
+                "value": "1866",
+                "operator": ">=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "5492547",
+                "operator": ">=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "4",
+                "operator": "<=",
+                "columnName": "l_linenumber"
+            }
+        ],
+        "FileName": "Generated_Query_22.sql",
+        "id": 14
+    },
+    {
+        "predicates": [
+            {
+                "value": "'F'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            },
+            {
+                "value": "'RAIL'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            },
+            {
+                "value": "1",
+                "operator": "<=",
+                "columnName": "l_linenumber"
+            },
+            {
+                "value": "'DELIVER IN PERSON'",
+                "operator": "=",
+                "columnName": "l_shipinstruct"
+            },
+            {
+                "value": "4",
+                "operator": ">=",
+                "columnName": "l_quantity"
+            },
+            {
+                "value": "179623",
+                "operator": ">=",
+                "columnName": "l_partkey"
+            },
+            {
+                "value": "2519258",
+                "operator": ">=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "8742",
+                "operator": "<=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "1994-07-10",
+                "operator": "<=",
+                "columnName": "l_commitdate"
+            },
+            {
+                "value": "72374",
+                "operator": "<=",
+                "columnName": "l_extendedprice"
+            },
+            {
+                "value": "1996-03-11",
+                "operator": "<=",
+                "columnName": "l_receiptdate"
+            },
+            {
+                "value": "'A'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            },
+            {
+                "value": "1993-06-27",
+                "operator": "<=",
+                "columnName": "l_shipdate"
+            }
+        ],
+        "FileName": "Generated_Query_23.sql",
+        "id": 15
+    },
+    {
+        "predicates": [
+            {
+                "value": "98407",
+                "operator": "<=",
+                "columnName": "l_extendedprice"
+            },
+            {
+                "value": "1995-11-05",
+                "operator": ">=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "41",
+                "operator": "<=",
+                "columnName": "l_quantity"
+            }
+        ],
+        "FileName": "Generated_Query_24.sql",
+        "id": 16
+    },
+    {
+        "predicates": [
+            {
+                "value": "44834",
+                "operator": ">=",
+                "columnName": "l_extendedprice"
+            },
+            {
+                "value": "'F'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            }
+        ],
+        "FileName": "Generated_Query_25.sql",
+        "id": 17
+    },
+    {
+        "predicates": [
+            {
+                "value": "'SHIP'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            },
+            {
+                "value": "'F'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            },
+            {
+                "value": "759106",
+                "operator": ">=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "1996-06-16",
+                "operator": ">=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "5125",
+                "operator": ">=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "'N'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            }
+        ],
+        "FileName": "Generated_Query_26.sql",
+        "id": 18
+    },
+    {
+        "predicates": [
+            {
+                "value": "'A'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            },
+            {
+                "value": "3",
+                "operator": "<=",
+                "columnName": "l_linenumber"
+            },
+            {
+                "value": "1994-01-24",
+                "operator": ">=",
+                "columnName": "l_commitdate"
+            },
+            {
+                "value": "'COLLECT COD'",
+                "operator": "=",
+                "columnName": "l_shipinstruct"
+            },
+            {
+                "value": "1998-09-10",
+                "operator": ">=",
+                "columnName": "l_receiptdate"
+            },
+            {
+                "value": "68621",
+                "operator": ">=",
+                "columnName": "l_partkey"
+            },
+            {
+                "value": "1997-10-04",
+                "operator": "<=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "'REG AIR'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            },
+            {
+                "value": "'O'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            },
+            {
+                "value": "10",
+                "operator": ">=",
+                "columnName": "l_quantity"
+            }
+        ],
+        "FileName": "Generated_Query_27.sql",
+        "id": 19
+    },
+    {
+        "predicates": [
+            {
+                "value": "'F'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            },
+            {
+                "value": "3782",
+                "operator": ">=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "1",
+                "operator": "<=",
+                "columnName": "l_linenumber"
+            },
+            {
+                "value": "1997-09-16",
+                "operator": ">=",
+                "columnName": "l_commitdate"
+            },
+            {
+                "value": "'AIR'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            },
+            {
+                "value": "5",
+                "operator": "<=",
+                "columnName": "l_quantity"
+            },
+            {
+                "value": "4837704",
+                "operator": ">=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "1992-03-18",
+                "operator": ">=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "'R'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            },
+            {
+                "value": "83869",
+                "operator": "<=",
+                "columnName": "l_extendedprice"
+            },
+            {
+                "value": "1995-10-03",
+                "operator": ">=",
+                "columnName": "l_receiptdate"
+            }
+        ],
+        "FileName": "Generated_Query_28.sql",
+        "id": 20
+    },
+    {
+        "predicates": [
+            {
+                "value": "'DELIVER IN PERSON'",
+                "operator": "=",
+                "columnName": "l_shipinstruct"
+            },
+            {
+                "value": "8",
+                "operator": ">=",
+                "columnName": "l_quantity"
+            },
+            {
+                "value": "1997-09-01",
+                "operator": ">=",
+                "columnName": "l_receiptdate"
+            },
+            {
+                "value": "5",
+                "operator": "<=",
+                "columnName": "l_linenumber"
+            },
+            {
+                "value": "5717",
+                "operator": "<=",
+                "columnName": "l_extendedprice"
+            },
+            {
+                "value": "'N'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            },
+            {
+                "value": "5745",
+                "operator": "<=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "1994-04-18",
+                "operator": ">=",
+                "columnName": "l_commitdate"
+            },
+            {
+                "value": "143252",
+                "operator": "<=",
+                "columnName": "l_partkey"
+            },
+            {
+                "value": "3505444",
+                "operator": ">=",
+                "columnName": "l_orderkey"
+            }
+        ],
+        "FileName": "Generated_Query_29.sql",
+        "id": 21
+    },
+    {
+        "predicates": [
+            {
+                "value": "'TAKE BACK RETURN'",
+                "operator": "=",
+                "columnName": "l_shipinstruct"
+            },
+            {
+                "value": "1998-07-15",
+                "operator": ">=",
+                "columnName": "l_receiptdate"
+            },
+            {
+                "value": "1995-11-04",
+                "operator": "<=",
+                "columnName": "l_commitdate"
+            },
+            {
+                "value": "1",
+                "operator": "<=",
+                "columnName": "l_linenumber"
+            }
+        ],
+        "FileName": "Generated_Query_3.sql",
+        "id": 22
+    },
+    {
+        "predicates": [
+            {
+                "value": "20",
+                "operator": "<=",
+                "columnName": "l_quantity"
+            },
+            {
+                "value": "'F'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            },
+            {
+                "value": "1998-04-06",
+                "operator": "<=",
+                "columnName": "l_receiptdate"
+            },
+            {
+                "value": "'FOB'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            },
+            {
+                "value": "9417",
+                "operator": "<=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "1992-03-22",
+                "operator": ">=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "2978158",
+                "operator": ">=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "136278",
+                "operator": "<=",
+                "columnName": "l_partkey"
+            }
+        ],
+        "FileName": "Generated_Query_30.sql",
+        "id": 23
+    },
+    {
+        "predicates": [
+            {
+                "value": "104699",
+                "operator": "<=",
+                "columnName": "l_extendedprice"
+            },
+            {
+                "value": "4383983",
+                "operator": "<=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "8413",
+                "operator": ">=",
+                "columnName": "l_suppkey"
+            }
+        ],
+        "FileName": "Generated_Query_31.sql",
+        "id": 24
+    },
+    {
+        "predicates": [
+            {
+                "value": "1994-10-11",
+                "operator": "<=",
+                "columnName": "l_receiptdate"
+            },
+            {
+                "value": "'COLLECT COD'",
+                "operator": "=",
+                "columnName": "l_shipinstruct"
+            },
+            {
+                "value": "37",
+                "operator": ">=",
+                "columnName": "l_quantity"
+            },
+            {
+                "value": "'R'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            },
+            {
+                "value": "3384",
+                "operator": ">=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "6",
+                "operator": "<=",
+                "columnName": "l_linenumber"
+            },
+            {
+                "value": "'O'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            },
+            {
+                "value": "2773272",
+                "operator": "<=",
+                "columnName": "l_orderkey"
+            }
+        ],
+        "FileName": "Generated_Query_32.sql",
+        "id": 25
+    },
+    {
+        "predicates": [
+            {
+                "value": "2",
+                "operator": ">=",
+                "columnName": "l_quantity"
+            },
+            {
+                "value": "1995-03-24",
+                "operator": "<=",
+                "columnName": "l_receiptdate"
+            },
+            {
+                "value": "51235",
+                "operator": "<=",
+                "columnName": "l_extendedprice"
+            }
+        ],
+        "FileName": "Generated_Query_33.sql",
+        "id": 26
+    },
+    {
+        "predicates": [
+            {
+                "value": "'AIR'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            },
+            {
+                "value": "1995-10-28",
+                "operator": ">=",
+                "columnName": "l_commitdate"
+            }
+        ],
+        "FileName": "Generated_Query_34.sql",
+        "id": 27
+    },
+    {
+        "predicates": [
+            {
+                "value": "'DELIVER IN PERSON'",
+                "operator": "=",
+                "columnName": "l_shipinstruct"
+            },
+            {
+                "value": "1998-02-11",
+                "operator": "<=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "'N'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            },
+            {
+                "value": "5",
+                "operator": ">=",
+                "columnName": "l_quantity"
+            },
+            {
+                "value": "9086",
+                "operator": "<=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "1996-03-05",
+                "operator": ">=",
+                "columnName": "l_commitdate"
+            },
+            {
+                "value": "128016",
+                "operator": "<=",
+                "columnName": "l_partkey"
+            },
+            {
+                "value": "6",
+                "operator": ">=",
+                "columnName": "l_linenumber"
+            },
+            {
+                "value": "57901",
+                "operator": ">=",
+                "columnName": "l_extendedprice"
+            },
+            {
+                "value": "'FOB'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            }
+        ],
+        "FileName": "Generated_Query_35.sql",
+        "id": 28
+    },
+    {
+        "predicates": [
+            {
+                "value": "2193",
+                "operator": "<=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "'N'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            },
+            {
+                "value": "'COLLECT COD'",
+                "operator": "=",
+                "columnName": "l_shipinstruct"
+            },
+            {
+                "value": "1997-12-01",
+                "operator": "<=",
+                "columnName": "l_commitdate"
+            },
+            {
+                "value": "1992-09-24",
+                "operator": "<=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "12",
+                "operator": "<=",
+                "columnName": "l_quantity"
+            }
+        ],
+        "FileName": "Generated_Query_36.sql",
+        "id": 29
+    },
+    {
+        "predicates": [
+            {
+                "value": "1996-10-30",
+                "operator": "<=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "1804609",
+                "operator": "<=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "14787",
+                "operator": ">=",
+                "columnName": "l_partkey"
+            },
+            {
+                "value": "1992-06-05",
+                "operator": "<=",
+                "columnName": "l_receiptdate"
+            },
+            {
+                "value": "6645",
+                "operator": "<=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "10",
+                "operator": ">=",
+                "columnName": "l_quantity"
+            }
+        ],
+        "FileName": "Generated_Query_37.sql",
+        "id": 30
+    },
+    {
+        "predicates": [
+            {
+                "value": "240",
+                "operator": ">=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "1997-01-03",
+                "operator": ">=",
+                "columnName": "l_commitdate"
+            },
+            {
+                "value": "'COLLECT COD'",
+                "operator": "=",
+                "columnName": "l_shipinstruct"
+            },
+            {
+                "value": "4",
+                "operator": ">=",
+                "columnName": "l_linenumber"
+            },
+            {
+                "value": "3528806",
+                "operator": ">=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "'SHIP'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            },
+            {
+                "value": "1994-10-21",
+                "operator": ">=",
+                "columnName": "l_receiptdate"
+            },
+            {
+                "value": "'O'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            },
+            {
+                "value": "1992-06-08",
+                "operator": "<=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "11118",
+                "operator": ">=",
+                "columnName": "l_partkey"
+            },
+            {
+                "value": "38",
+                "operator": "<=",
+                "columnName": "l_quantity"
+            },
+            {
+                "value": "9351",
+                "operator": ">=",
+                "columnName": "l_extendedprice"
+            },
+            {
+                "value": "'A'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            }
+        ],
+        "FileName": "Generated_Query_38.sql",
+        "id": 31
+    },
+    {
+        "predicates": [
+            {
+                "value": "67740",
+                "operator": "<=",
+                "columnName": "l_partkey"
+            },
+            {
+                "value": "'TAKE BACK RETURN'",
+                "operator": "=",
+                "columnName": "l_shipinstruct"
+            },
+            {
+                "value": "1994-06-03",
+                "operator": ">=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "3866358",
+                "operator": ">=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "1996-02-24",
+                "operator": ">=",
+                "columnName": "l_commitdate"
+            },
+            {
+                "value": "'RAIL'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            },
+            {
+                "value": "24098",
+                "operator": "<=",
+                "columnName": "l_extendedprice"
+            },
+            {
+                "value": "'F'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            },
+            {
+                "value": "15",
+                "operator": "<=",
+                "columnName": "l_quantity"
+            },
+            {
+                "value": "'A'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            },
+            {
+                "value": "869",
+                "operator": "<=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "1994-08-29",
+                "operator": ">=",
+                "columnName": "l_receiptdate"
+            },
+            {
+                "value": "1",
+                "operator": ">=",
+                "columnName": "l_linenumber"
+            }
+        ],
+        "FileName": "Generated_Query_39.sql",
+        "id": 32
+    },
+    {
+        "predicates": [
+            {
+                "value": "8545",
+                "operator": ">=",
+                "columnName": "l_extendedprice"
+            },
+            {
+                "value": "1994-01-19",
+                "operator": "<=",
+                "columnName": "l_commitdate"
+            },
+            {
+                "value": "6",
+                "operator": ">=",
+                "columnName": "l_quantity"
+            },
+            {
+                "value": "1998-04-27",
+                "operator": "<=",
+                "columnName": "l_receiptdate"
+            }
+        ],
+        "FileName": "Generated_Query_4.sql",
+        "id": 33
+    },
+    {
+        "predicates": [
+            {
+                "value": "'R'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            },
+            {
+                "value": "2874564",
+                "operator": "<=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "'O'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            }
+        ],
+        "FileName": "Generated_Query_40.sql",
+        "id": 34
+    },
+    {
+        "predicates": [
+            {
+                "value": "167",
+                "operator": "<=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "'A'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            },
+            {
+                "value": "1994-03-28",
+                "operator": "<=",
+                "columnName": "l_shipdate"
+            }
+        ],
+        "FileName": "Generated_Query_41.sql",
+        "id": 35
+    },
+    {
+        "predicates": [
+            {
+                "value": "1998-01-20",
+                "operator": ">=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "134454",
+                "operator": "<=",
+                "columnName": "l_partkey"
+            },
+            {
+                "value": "92634",
+                "operator": "<=",
+                "columnName": "l_extendedprice"
+            },
+            {
+                "value": "1994-12-22",
+                "operator": ">=",
+                "columnName": "l_receiptdate"
+            }
+        ],
+        "FileName": "Generated_Query_42.sql",
+        "id": 36
+    },
+    {
+        "predicates": [
+            {
+                "value": "'F'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            },
+            {
+                "value": "'SHIP'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            },
+            {
+                "value": "1994-02-28",
+                "operator": ">=",
+                "columnName": "l_receiptdate"
+            },
+            {
+                "value": "3",
+                "operator": "<=",
+                "columnName": "l_linenumber"
+            }
+        ],
+        "FileName": "Generated_Query_43.sql",
+        "id": 37
+    },
+    {
+        "predicates": [
+            {
+                "value": "4048388",
+                "operator": ">=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "'N'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            },
+            {
+                "value": "90096",
+                "operator": "<=",
+                "columnName": "l_partkey"
+            },
+            {
+                "value": "1992-10-24",
+                "operator": "<=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "6655",
+                "operator": ">=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "1994-10-12",
+                "operator": ">=",
+                "columnName": "l_receiptdate"
+            },
+            {
+                "value": "1994-01-23",
+                "operator": ">=",
+                "columnName": "l_commitdate"
+            },
+            {
+                "value": "'F'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            }
+        ],
+        "FileName": "Generated_Query_44.sql",
+        "id": 38
+    },
+    {
+        "predicates": [
+            {
+                "value": "3",
+                "operator": "<=",
+                "columnName": "l_linenumber"
+            },
+            {
+                "value": "'R'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            },
+            {
+                "value": "'O'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            },
+            {
+                "value": "1993-09-09",
+                "operator": "<=",
+                "columnName": "l_commitdate"
+            },
+            {
+                "value": "1996-10-19",
+                "operator": ">=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "2995",
+                "operator": "<=",
+                "columnName": "l_suppkey"
+            }
+        ],
+        "FileName": "Generated_Query_46.sql",
+        "id": 39
+    },
+    {
+        "predicates": [
+            {
+                "value": "1994-09-06",
+                "operator": "<=",
+                "columnName": "l_receiptdate"
+            },
+            {
+                "value": "'F'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            },
+            {
+                "value": "'TAKE BACK RETURN'",
+                "operator": "=",
+                "columnName": "l_shipinstruct"
+            },
+            {
+                "value": "1997-11-07",
+                "operator": ">=",
+                "columnName": "l_commitdate"
+            },
+            {
+                "value": "8957",
+                "operator": ">=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "65214",
+                "operator": "<=",
+                "columnName": "l_extendedprice"
+            },
+            {
+                "value": "'N'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            },
+            {
+                "value": "'AIR'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            }
+        ],
+        "FileName": "Generated_Query_48.sql",
+        "id": 40
+    },
+    {
+        "predicates": [
+            {
+                "value": "1996-04-21",
+                "operator": ">=",
+                "columnName": "l_receiptdate"
+            },
+            {
+                "value": "16",
+                "operator": "<=",
+                "columnName": "l_quantity"
+            },
+            {
+                "value": "6",
+                "operator": ">=",
+                "columnName": "l_linenumber"
+            },
+            {
+                "value": "'N'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            },
+            {
+                "value": "'O'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            },
+            {
+                "value": "45537",
+                "operator": ">=",
+                "columnName": "l_extendedprice"
+            },
+            {
+                "value": "'RAIL'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            }
+        ],
+        "FileName": "Generated_Query_49.sql",
+        "id": 41
+    },
+    {
+        "predicates": [
+            {
+                "value": "5723452",
+                "operator": ">=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "'REG AIR'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            },
+            {
+                "value": "'A'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            },
+            {
+                "value": "'COLLECT COD'",
+                "operator": "=",
+                "columnName": "l_shipinstruct"
+            },
+            {
+                "value": "1995-03-05",
+                "operator": ">=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "4740",
+                "operator": ">=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "'F'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            },
+            {
+                "value": "7513",
+                "operator": ">=",
+                "columnName": "l_extendedprice"
+            },
+            {
+                "value": "31451",
+                "operator": ">=",
+                "columnName": "l_partkey"
+            }
+        ],
+        "FileName": "Generated_Query_5.sql",
+        "id": 42
+    },
+    {
+        "predicates": [
+            {
+                "value": "2",
+                "operator": "<=",
+                "columnName": "l_linenumber"
+            },
+            {
+                "value": "'N'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            },
+            {
+                "value": "1995-11-07",
+                "operator": "<=",
+                "columnName": "l_commitdate"
+            },
+            {
+                "value": "'O'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            },
+            {
+                "value": "'COLLECT COD'",
+                "operator": "=",
+                "columnName": "l_shipinstruct"
+            },
+            {
+                "value": "187137",
+                "operator": ">=",
+                "columnName": "l_partkey"
+            }
+        ],
+        "FileName": "Generated_Query_51.sql",
+        "id": 43
+    },
+    {
+        "predicates": [
+            {
+                "value": "'DELIVER IN PERSON'",
+                "operator": "=",
+                "columnName": "l_shipinstruct"
+            },
+            {
+                "value": "92889",
+                "operator": "<=",
+                "columnName": "l_extendedprice"
+            }
+        ],
+        "FileName": "Generated_Query_52.sql",
+        "id": 44
+    },
+    {
+        "predicates": [
+            {
+                "value": "6791",
+                "operator": "<=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "'F'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            },
+            {
+                "value": "1993-05-28",
+                "operator": "<=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "6",
+                "operator": ">=",
+                "columnName": "l_linenumber"
+            },
+            {
+                "value": "1998-04-12",
+                "operator": "<=",
+                "columnName": "l_commitdate"
+            },
+            {
+                "value": "'COLLECT COD'",
+                "operator": "=",
+                "columnName": "l_shipinstruct"
+            },
+            {
+                "value": "'N'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            },
+            {
+                "value": "59010",
+                "operator": "<=",
+                "columnName": "l_extendedprice"
+            },
+            {
+                "value": "1994-05-02",
+                "operator": ">=",
+                "columnName": "l_receiptdate"
+            },
+            {
+                "value": "'RAIL'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            },
+            {
+                "value": "4000562",
+                "operator": "<=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "43739",
+                "operator": ">=",
+                "columnName": "l_partkey"
+            },
+            {
+                "value": "36",
+                "operator": "<=",
+                "columnName": "l_quantity"
+            }
+        ],
+        "FileName": "Generated_Query_53.sql",
+        "id": 45
+    },
+    {
+        "predicates": [
+            {
+                "value": "2263397",
+                "operator": ">=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "48",
+                "operator": "<=",
+                "columnName": "l_quantity"
+            },
+            {
+                "value": "1994-01-28",
+                "operator": ">=",
+                "columnName": "l_commitdate"
+            },
+            {
+                "value": "'N'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            },
+            {
+                "value": "'F'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            }
+        ],
+        "FileName": "Generated_Query_54.sql",
+        "id": 46
+    },
+    {
+        "predicates": [
+            {
+                "value": "5950840",
+                "operator": ">=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "'O'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            },
+            {
+                "value": "2",
+                "operator": "<=",
+                "columnName": "l_linenumber"
+            },
+            {
+                "value": "'N'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            },
+            {
+                "value": "64642",
+                "operator": ">=",
+                "columnName": "l_partkey"
+            },
+            {
+                "value": "1995-06-23",
+                "operator": "<=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "30",
+                "operator": "<=",
+                "columnName": "l_quantity"
+            },
+            {
+                "value": "1998-08-22",
+                "operator": ">=",
+                "columnName": "l_receiptdate"
+            },
+            {
+                "value": "'AIR'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            },
+            {
+                "value": "17533",
+                "operator": "<=",
+                "columnName": "l_extendedprice"
+            },
+            {
+                "value": "3090",
+                "operator": "<=",
+                "columnName": "l_suppkey"
+            }
+        ],
+        "FileName": "Generated_Query_55.sql",
+        "id": 47
+    },
+    {
+        "predicates": [
+            {
+                "value": "'O'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            },
+            {
+                "value": "1997-10-27",
+                "operator": ">=",
+                "columnName": "l_commitdate"
+            },
+            {
+                "value": "5",
+                "operator": ">=",
+                "columnName": "l_linenumber"
+            },
+            {
+                "value": "'A'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            },
+            {
+                "value": "1992-04-30",
+                "operator": ">=",
+                "columnName": "l_receiptdate"
+            },
+            {
+                "value": "52351",
+                "operator": "<=",
+                "columnName": "l_extendedprice"
+            },
+            {
+                "value": "170104",
+                "operator": ">=",
+                "columnName": "l_partkey"
+            }
+        ],
+        "FileName": "Generated_Query_56.sql",
+        "id": 48
+    },
+    {
+        "predicates": [
+            {
+                "value": "1995-02-17",
+                "operator": "<=",
+                "columnName": "l_receiptdate"
+            },
+            {
+                "value": "5830459",
+                "operator": "<=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "1998-09-13",
+                "operator": "<=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "4",
+                "operator": "<=",
+                "columnName": "l_linenumber"
+            },
+            {
+                "value": "19",
+                "operator": ">=",
+                "columnName": "l_quantity"
+            },
+            {
+                "value": "'SHIP'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            },
+            {
+                "value": "39352",
+                "operator": "<=",
+                "columnName": "l_extendedprice"
+            },
+            {
+                "value": "'TAKE BACK RETURN'",
+                "operator": "=",
+                "columnName": "l_shipinstruct"
+            },
+            {
+                "value": "1997-09-29",
+                "operator": "<=",
+                "columnName": "l_commitdate"
+            },
+            {
+                "value": "'R'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            }
+        ],
+        "FileName": "Generated_Query_58.sql",
+        "id": 49
+    },
+    {
+        "predicates": [
+            {
+                "value": "4454",
+                "operator": ">=",
+                "columnName": "l_extendedprice"
+            },
+            {
+                "value": "2794",
+                "operator": ">=",
+                "columnName": "l_partkey"
+            },
+            {
+                "value": "'O'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            },
+            {
+                "value": "1996-09-25",
+                "operator": ">=",
+                "columnName": "l_receiptdate"
+            },
+            {
+                "value": "3658",
+                "operator": ">=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "5675290",
+                "operator": "<=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "1994-09-08",
+                "operator": "<=",
+                "columnName": "l_commitdate"
+            },
+            {
+                "value": "1995-12-21",
+                "operator": ">=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "5",
+                "operator": ">=",
+                "columnName": "l_quantity"
+            },
+            {
+                "value": "'DELIVER IN PERSON'",
+                "operator": "=",
+                "columnName": "l_shipinstruct"
+            },
+            {
+                "value": "'AIR'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            }
+        ],
+        "FileName": "Generated_Query_59.sql",
+        "id": 50
+    },
+    {
+        "predicates": [
+            {
+                "value": "163456",
+                "operator": "<=",
+                "columnName": "l_partkey"
+            },
+            {
+                "value": "100938",
+                "operator": ">=",
+                "columnName": "l_extendedprice"
+            },
+            {
+                "value": "31",
+                "operator": ">=",
+                "columnName": "l_quantity"
+            },
+            {
+                "value": "80",
+                "operator": ">=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "'F'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            }
+        ],
+        "FileName": "Generated_Query_60.sql",
+        "id": 51
+    },
+    {
+        "predicates": [
+            {
+                "value": "4",
+                "operator": "<=",
+                "columnName": "l_quantity"
+            },
+            {
+                "value": "1995-05-01",
+                "operator": "<=",
+                "columnName": "l_receiptdate"
+            },
+            {
+                "value": "2",
+                "operator": ">=",
+                "columnName": "l_linenumber"
+            },
+            {
+                "value": "'F'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            },
+            {
+                "value": "12314",
+                "operator": ">=",
+                "columnName": "l_extendedprice"
+            },
+            {
+                "value": "3126838",
+                "operator": "<=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "'COLLECT COD'",
+                "operator": "=",
+                "columnName": "l_shipinstruct"
+            },
+            {
+                "value": "'FOB'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            },
+            {
+                "value": "'N'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            }
+        ],
+        "FileName": "Generated_Query_61.sql",
+        "id": 52
+    },
+    {
+        "predicates": [
+            {
+                "value": "'TAKE BACK RETURN'",
+                "operator": "=",
+                "columnName": "l_shipinstruct"
+            },
+            {
+                "value": "5",
+                "operator": ">=",
+                "columnName": "l_linenumber"
+            },
+            {
+                "value": "'REG AIR'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            },
+            {
+                "value": "1997-08-06",
+                "operator": ">=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "19",
+                "operator": "<=",
+                "columnName": "l_quantity"
+            },
+            {
+                "value": "138390",
+                "operator": ">=",
+                "columnName": "l_partkey"
+            },
+            {
+                "value": "4253275",
+                "operator": "<=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "7373",
+                "operator": ">=",
+                "columnName": "l_extendedprice"
+            },
+            {
+                "value": "'A'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            }
+        ],
+        "FileName": "Generated_Query_62.sql",
+        "id": 53
+    },
+    {
+        "predicates": [
+            {
+                "value": "8149",
+                "operator": ">=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "37288",
+                "operator": "<=",
+                "columnName": "l_extendedprice"
+            },
+            {
+                "value": "1998-10-11",
+                "operator": ">=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "1998-04-26",
+                "operator": ">=",
+                "columnName": "l_commitdate"
+            },
+            {
+                "value": "1998-08-01",
+                "operator": "<=",
+                "columnName": "l_receiptdate"
+            },
+            {
+                "value": "'MAIL'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            },
+            {
+                "value": "21114",
+                "operator": ">=",
+                "columnName": "l_partkey"
+            },
+            {
+                "value": "36",
+                "operator": ">=",
+                "columnName": "l_quantity"
+            },
+            {
+                "value": "4961573",
+                "operator": ">=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "'R'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            },
+            {
+                "value": "'COLLECT COD'",
+                "operator": "=",
+                "columnName": "l_shipinstruct"
+            },
+            {
+                "value": "'F'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            },
+            {
+                "value": "3",
+                "operator": ">=",
+                "columnName": "l_linenumber"
+            }
+        ],
+        "FileName": "Generated_Query_63.sql",
+        "id": 54
+    },
+    {
+        "predicates": [
+            {
+                "value": "2361",
+                "operator": ">=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "'A'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            },
+            {
+                "value": "1997-11-18",
+                "operator": ">=",
+                "columnName": "l_receiptdate"
+            },
+            {
+                "value": "6",
+                "operator": ">=",
+                "columnName": "l_linenumber"
+            },
+            {
+                "value": "18524",
+                "operator": "<=",
+                "columnName": "l_extendedprice"
+            },
+            {
+                "value": "1995-02-10",
+                "operator": ">=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "'TRUCK'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            },
+            {
+                "value": "126310",
+                "operator": "<=",
+                "columnName": "l_partkey"
+            },
+            {
+                "value": "3959564",
+                "operator": ">=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "1997-05-21",
+                "operator": "<=",
+                "columnName": "l_commitdate"
+            },
+            {
+                "value": "30",
+                "operator": "<=",
+                "columnName": "l_quantity"
+            },
+            {
+                "value": "'DELIVER IN PERSON'",
+                "operator": "=",
+                "columnName": "l_shipinstruct"
+            }
+        ],
+        "FileName": "Generated_Query_65.sql",
+        "id": 55
+    },
+    {
+        "predicates": [
+            {
+                "value": "'N'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            },
+            {
+                "value": "'O'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            },
+            {
+                "value": "72745",
+                "operator": "<=",
+                "columnName": "l_extendedprice"
+            },
+            {
+                "value": "6533",
+                "operator": "<=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "1992-04-24",
+                "operator": ">=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "41",
+                "operator": ">=",
+                "columnName": "l_quantity"
+            },
+            {
+                "value": "62372",
+                "operator": ">=",
+                "columnName": "l_partkey"
+            },
+            {
+                "value": "'TAKE BACK RETURN'",
+                "operator": "=",
+                "columnName": "l_shipinstruct"
+            },
+            {
+                "value": "'AIR'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            },
+            {
+                "value": "1993-08-19",
+                "operator": ">=",
+                "columnName": "l_commitdate"
+            }
+        ],
+        "FileName": "Generated_Query_66.sql",
+        "id": 56
+    },
+    {
+        "predicates": [
+            {
+                "value": "'RAIL'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            },
+            {
+                "value": "1993-03-21",
+                "operator": "<=",
+                "columnName": "l_shipdate"
+            }
+        ],
+        "FileName": "Generated_Query_67.sql",
+        "id": 57
+    },
+    {
+        "predicates": [
+            {
+                "value": "'DELIVER IN PERSON'",
+                "operator": "=",
+                "columnName": "l_shipinstruct"
+            },
+            {
+                "value": "'R'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            },
+            {
+                "value": "936158",
+                "operator": ">=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "'O'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            },
+            {
+                "value": "'MAIL'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            },
+            {
+                "value": "9079",
+                "operator": "<=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "22838",
+                "operator": "<=",
+                "columnName": "l_partkey"
+            },
+            {
+                "value": "5",
+                "operator": ">=",
+                "columnName": "l_linenumber"
+            },
+            {
+                "value": "1996-11-30",
+                "operator": ">=",
+                "columnName": "l_receiptdate"
+            },
+            {
+                "value": "43",
+                "operator": ">=",
+                "columnName": "l_quantity"
+            }
+        ],
+        "FileName": "Generated_Query_68.sql",
+        "id": 58
+    },
+    {
+        "predicates": [
+            {
+                "value": "1996-07-16",
+                "operator": "<=",
+                "columnName": "l_receiptdate"
+            },
+            {
+                "value": "'O'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            },
+            {
+                "value": "'AIR'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            },
+            {
+                "value": "'DELIVER IN PERSON'",
+                "operator": "=",
+                "columnName": "l_shipinstruct"
+            },
+            {
+                "value": "1994-11-20",
+                "operator": "<=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "7207",
+                "operator": ">=",
+                "columnName": "l_suppkey"
+            }
+        ],
+        "FileName": "Generated_Query_69.sql",
+        "id": 59
+    },
+    {
+        "predicates": [
+            {
+                "value": "'O'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            },
+            {
+                "value": "91686",
+                "operator": "<=",
+                "columnName": "l_partkey"
+            },
+            {
+                "value": "9810",
+                "operator": "<=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "15",
+                "operator": ">=",
+                "columnName": "l_quantity"
+            }
+        ],
+        "FileName": "Generated_Query_7.sql",
+        "id": 60
+    },
+    {
+        "predicates": [
+            {
+                "value": "1997-04-11",
+                "operator": "<=",
+                "columnName": "l_receiptdate"
+            },
+            {
+                "value": "90156",
+                "operator": "<=",
+                "columnName": "l_partkey"
+            },
+            {
+                "value": "485",
+                "operator": "<=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "2288597",
+                "operator": "<=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "1997-06-03",
+                "operator": ">=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "'DELIVER IN PERSON'",
+                "operator": "=",
+                "columnName": "l_shipinstruct"
+            },
+            {
+                "value": "1993-03-21",
+                "operator": ">=",
+                "columnName": "l_commitdate"
+            },
+            {
+                "value": "5",
+                "operator": ">=",
+                "columnName": "l_linenumber"
+            }
+        ],
+        "FileName": "Generated_Query_70.sql",
+        "id": 61
+    },
+    {
+        "predicates": [
+            {
+                "value": "36375",
+                "operator": ">=",
+                "columnName": "l_extendedprice"
+            },
+            {
+                "value": "1996-10-20",
+                "operator": "<=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "1996-05-08",
+                "operator": ">=",
+                "columnName": "l_receiptdate"
+            }
+        ],
+        "FileName": "Generated_Query_71.sql",
+        "id": 62
+    },
+    {
+        "predicates": [
+            {
+                "value": "'R'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            },
+            {
+                "value": "8309",
+                "operator": ">=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "34",
+                "operator": ">=",
+                "columnName": "l_quantity"
+            },
+            {
+                "value": "6",
+                "operator": "<=",
+                "columnName": "l_linenumber"
+            },
+            {
+                "value": "1998-08-01",
+                "operator": ">=",
+                "columnName": "l_commitdate"
+            },
+            {
+                "value": "'F'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            }
+        ],
+        "FileName": "Generated_Query_72.sql",
+        "id": 63
+    },
+    {
+        "predicates": [
+            {
+                "value": "1369872",
+                "operator": ">=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "1998-01-06",
+                "operator": "<=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "3",
+                "operator": ">=",
+                "columnName": "l_linenumber"
+            },
+            {
+                "value": "99834",
+                "operator": ">=",
+                "columnName": "l_partkey"
+            },
+            {
+                "value": "'DELIVER IN PERSON'",
+                "operator": "=",
+                "columnName": "l_shipinstruct"
+            },
+            {
+                "value": "1992-10-07",
+                "operator": ">=",
+                "columnName": "l_commitdate"
+            },
+            {
+                "value": "9046",
+                "operator": "<=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "'MAIL'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            }
+        ],
+        "FileName": "Generated_Query_73.sql",
+        "id": 64
+    },
+    {
+        "predicates": [
+            {
+                "value": "'MAIL'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            },
+            {
+                "value": "96030",
+                "operator": ">=",
+                "columnName": "l_partkey"
+            },
+            {
+                "value": "1995-09-15",
+                "operator": "<=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "14292",
+                "operator": ">=",
+                "columnName": "l_extendedprice"
+            }
+        ],
+        "FileName": "Generated_Query_74.sql",
+        "id": 65
+    },
+    {
+        "predicates": [
+            {
+                "value": "'O'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            },
+            {
+                "value": "'TRUCK'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            },
+            {
+                "value": "'A'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            },
+            {
+                "value": "1996-06-04",
+                "operator": "<=",
+                "columnName": "l_receiptdate"
+            },
+            {
+                "value": "16",
+                "operator": "<=",
+                "columnName": "l_quantity"
+            },
+            {
+                "value": "3103",
+                "operator": ">=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "1992-05-02",
+                "operator": ">=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "5",
+                "operator": ">=",
+                "columnName": "l_linenumber"
+            },
+            {
+                "value": "1998-04-30",
+                "operator": "<=",
+                "columnName": "l_commitdate"
+            },
+            {
+                "value": "'DELIVER IN PERSON'",
+                "operator": "=",
+                "columnName": "l_shipinstruct"
+            }
+        ],
+        "FileName": "Generated_Query_75.sql",
+        "id": 66
+    },
+    {
+        "predicates": [
+            {
+                "value": "1994-05-04",
+                "operator": ">=",
+                "columnName": "l_commitdate"
+            },
+            {
+                "value": "8751",
+                "operator": "<=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "1996-02-05",
+                "operator": "<=",
+                "columnName": "l_receiptdate"
+            },
+            {
+                "value": "'O'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            },
+            {
+                "value": "1",
+                "operator": ">=",
+                "columnName": "l_linenumber"
+            },
+            {
+                "value": "91503",
+                "operator": "<=",
+                "columnName": "l_extendedprice"
+            },
+            {
+                "value": "'FOB'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            }
+        ],
+        "FileName": "Generated_Query_76.sql",
+        "id": 67
+    },
+    {
+        "predicates": [
+            {
+                "value": "53574",
+                "operator": "<=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "'TAKE BACK RETURN'",
+                "operator": "=",
+                "columnName": "l_shipinstruct"
+            }
+        ],
+        "FileName": "Generated_Query_77.sql",
+        "id": 68
+    },
+    {
+        "predicates": [
+            {
+                "value": "1395676",
+                "operator": ">=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "'F'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            },
+            {
+                "value": "16",
+                "operator": ">=",
+                "columnName": "l_quantity"
+            },
+            {
+                "value": "1996-05-11",
+                "operator": ">=",
+                "columnName": "l_commitdate"
+            },
+            {
+                "value": "'SHIP'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            }
+        ],
+        "FileName": "Generated_Query_79.sql",
+        "id": 69
+    },
+    {
+        "predicates": [
+            {
+                "value": "'A'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            },
+            {
+                "value": "5954642",
+                "operator": "<=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "172180",
+                "operator": "<=",
+                "columnName": "l_partkey"
+            }
+        ],
+        "FileName": "Generated_Query_8.sql",
+        "id": 70
+    },
+    {
+        "predicates": [
+            {
+                "value": "3",
+                "operator": ">=",
+                "columnName": "l_linenumber"
+            },
+            {
+                "value": "6640",
+                "operator": ">=",
+                "columnName": "l_suppkey"
+            }
+        ],
+        "FileName": "Generated_Query_80.sql",
+        "id": 71
+    },
+    {
+        "predicates": [
+            {
+                "value": "14",
+                "operator": "<=",
+                "columnName": "l_quantity"
+            },
+            {
+                "value": "'TRUCK'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            },
+            {
+                "value": "178171",
+                "operator": "<=",
+                "columnName": "l_partkey"
+            },
+            {
+                "value": "'COLLECT COD'",
+                "operator": "=",
+                "columnName": "l_shipinstruct"
+            },
+            {
+                "value": "'O'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            },
+            {
+                "value": "1993-10-06",
+                "operator": "<=",
+                "columnName": "l_receiptdate"
+            },
+            {
+                "value": "1993-05-05",
+                "operator": ">=",
+                "columnName": "l_commitdate"
+            },
+            {
+                "value": "740",
+                "operator": "<=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "56769",
+                "operator": "<=",
+                "columnName": "l_extendedprice"
+            },
+            {
+                "value": "1997-02-26",
+                "operator": "<=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "1",
+                "operator": "<=",
+                "columnName": "l_linenumber"
+            },
+            {
+                "value": "3274073",
+                "operator": ">=",
+                "columnName": "l_orderkey"
+            }
+        ],
+        "FileName": "Generated_Query_81.sql",
+        "id": 72
+    },
+    {
+        "predicates": [
+            {
+                "value": "2785",
+                "operator": ">=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "116109",
+                "operator": "<=",
+                "columnName": "l_partkey"
+            }
+        ],
+        "FileName": "Generated_Query_82.sql",
+        "id": 73
+    },
+    {
+        "predicates": [
+            {
+                "value": "89042",
+                "operator": ">=",
+                "columnName": "l_extendedprice"
+            },
+            {
+                "value": "'REG AIR'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            },
+            {
+                "value": "'F'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            },
+            {
+                "value": "1994-04-09",
+                "operator": "<=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "5419285",
+                "operator": ">=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "43",
+                "operator": ">=",
+                "columnName": "l_quantity"
+            },
+            {
+                "value": "4742",
+                "operator": "<=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "'N'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            },
+            {
+                "value": "94207",
+                "operator": "<=",
+                "columnName": "l_partkey"
+            },
+            {
+                "value": "1994-07-16",
+                "operator": ">=",
+                "columnName": "l_receiptdate"
+            },
+            {
+                "value": "3",
+                "operator": ">=",
+                "columnName": "l_linenumber"
+            },
+            {
+                "value": "'DELIVER IN PERSON'",
+                "operator": "=",
+                "columnName": "l_shipinstruct"
+            },
+            {
+                "value": "1994-06-16",
+                "operator": ">=",
+                "columnName": "l_commitdate"
+            }
+        ],
+        "FileName": "Generated_Query_83.sql",
+        "id": 74
+    },
+    {
+        "predicates": [
+            {
+                "value": "1997-05-28",
+                "operator": "<=",
+                "columnName": "l_receiptdate"
+            },
+            {
+                "value": "1994-03-13",
+                "operator": "<=",
+                "columnName": "l_commitdate"
+            },
+            {
+                "value": "6",
+                "operator": ">=",
+                "columnName": "l_linenumber"
+            },
+            {
+                "value": "'TAKE BACK RETURN'",
+                "operator": "=",
+                "columnName": "l_shipinstruct"
+            },
+            {
+                "value": "1995-10-08",
+                "operator": ">=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "'F'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            },
+            {
+                "value": "'AIR'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            },
+            {
+                "value": "37717",
+                "operator": "<=",
+                "columnName": "l_extendedprice"
+            },
+            {
+                "value": "13",
+                "operator": "<=",
+                "columnName": "l_quantity"
+            },
+            {
+                "value": "118700",
+                "operator": "<=",
+                "columnName": "l_partkey"
+            }
+        ],
+        "FileName": "Generated_Query_84.sql",
+        "id": 75
+    },
+    {
+        "predicates": [
+            {
+                "value": "1015703",
+                "operator": "<=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "1998-01-28",
+                "operator": "<=",
+                "columnName": "l_receiptdate"
+            },
+            {
+                "value": "'A'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            }
+        ],
+        "FileName": "Generated_Query_85.sql",
+        "id": 76
+    },
+    {
+        "predicates": [
+            {
+                "value": "6225",
+                "operator": ">=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "'TAKE BACK RETURN'",
+                "operator": "=",
+                "columnName": "l_shipinstruct"
+            },
+            {
+                "value": "'F'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            },
+            {
+                "value": "3860149",
+                "operator": ">=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "48",
+                "operator": "<=",
+                "columnName": "l_quantity"
+            },
+            {
+                "value": "1996-04-28",
+                "operator": "<=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "1993-10-08",
+                "operator": "<=",
+                "columnName": "l_receiptdate"
+            },
+            {
+                "value": "'MAIL'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            },
+            {
+                "value": "'R'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            },
+            {
+                "value": "1992-08-30",
+                "operator": ">=",
+                "columnName": "l_commitdate"
+            },
+            {
+                "value": "5",
+                "operator": ">=",
+                "columnName": "l_linenumber"
+            },
+            {
+                "value": "107669",
+                "operator": "<=",
+                "columnName": "l_partkey"
+            }
+        ],
+        "FileName": "Generated_Query_86.sql",
+        "id": 77
+    },
+    {
+        "predicates": [
+            {
+                "value": "187939",
+                "operator": "<=",
+                "columnName": "l_partkey"
+            },
+            {
+                "value": "1994-02-11",
+                "operator": ">=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "1992-11-04",
+                "operator": ">=",
+                "columnName": "l_commitdate"
+            },
+            {
+                "value": "'A'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            },
+            {
+                "value": "94574",
+                "operator": ">=",
+                "columnName": "l_extendedprice"
+            },
+            {
+                "value": "3",
+                "operator": "<=",
+                "columnName": "l_linenumber"
+            },
+            {
+                "value": "119818",
+                "operator": "<=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "1997-05-25",
+                "operator": "<=",
+                "columnName": "l_receiptdate"
+            },
+            {
+                "value": "'DELIVER IN PERSON'",
+                "operator": "=",
+                "columnName": "l_shipinstruct"
+            },
+            {
+                "value": "5447",
+                "operator": ">=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "'O'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            },
+            {
+                "value": "'FOB'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            }
+        ],
+        "FileName": "Generated_Query_87.sql",
+        "id": 78
+    },
+    {
+        "predicates": [
+            {
+                "value": "22346",
+                "operator": ">=",
+                "columnName": "l_extendedprice"
+            },
+            {
+                "value": "'R'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            }
+        ],
+        "FileName": "Generated_Query_88.sql",
+        "id": 79
+    },
+    {
+        "predicates": [
+            {
+                "value": "84995",
+                "operator": ">=",
+                "columnName": "l_partkey"
+            },
+            {
+                "value": "26",
+                "operator": ">=",
+                "columnName": "l_quantity"
+            },
+            {
+                "value": "1998-04-21",
+                "operator": ">=",
+                "columnName": "l_receiptdate"
+            },
+            {
+                "value": "'N'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            },
+            {
+                "value": "6152",
+                "operator": "<=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "1994-12-08",
+                "operator": "<=",
+                "columnName": "l_commitdate"
+            },
+            {
+                "value": "1998-08-29",
+                "operator": ">=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "1",
+                "operator": "<=",
+                "columnName": "l_linenumber"
+            }
+        ],
+        "FileName": "Generated_Query_89.sql",
+        "id": 80
+    },
+    {
+        "predicates": [
+            {
+                "value": "26",
+                "operator": "<=",
+                "columnName": "l_quantity"
+            },
+            {
+                "value": "4",
+                "operator": "<=",
+                "columnName": "l_linenumber"
+            },
+            {
+                "value": "1997-04-01",
+                "operator": ">=",
+                "columnName": "l_commitdate"
+            },
+            {
+                "value": "4838055",
+                "operator": ">=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "1998-10-18",
+                "operator": ">=",
+                "columnName": "l_receiptdate"
+            }
+        ],
+        "FileName": "Generated_Query_9.sql",
+        "id": 81
+    },
+    {
+        "predicates": [
+            {
+                "value": "16",
+                "operator": ">=",
+                "columnName": "l_quantity"
+            },
+            {
+                "value": "'O'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            }
+        ],
+        "FileName": "Generated_Query_90.sql",
+        "id": 82
+    },
+    {
+        "predicates": [
+            {
+                "value": "4538167",
+                "operator": "<=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "174782",
+                "operator": "<=",
+                "columnName": "l_partkey"
+            },
+            {
+                "value": "42",
+                "operator": ">=",
+                "columnName": "l_quantity"
+            },
+            {
+                "value": "1996-04-06",
+                "operator": ">=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "8755",
+                "operator": "<=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "77833",
+                "operator": ">=",
+                "columnName": "l_extendedprice"
+            }
+        ],
+        "FileName": "Generated_Query_91.sql",
+        "id": 83
+    },
+    {
+        "predicates": [
+            {
+                "value": "1994-12-17",
+                "operator": "<=",
+                "columnName": "l_commitdate"
+            },
+            {
+                "value": "1994-04-02",
+                "operator": ">=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "'REG AIR'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            },
+            {
+                "value": "45",
+                "operator": ">=",
+                "columnName": "l_quantity"
+            },
+            {
+                "value": "233186",
+                "operator": ">=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "'O'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            },
+            {
+                "value": "1997-07-13",
+                "operator": "<=",
+                "columnName": "l_receiptdate"
+            },
+            {
+                "value": "'A'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            },
+            {
+                "value": "7351",
+                "operator": "<=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "42904",
+                "operator": ">=",
+                "columnName": "l_extendedprice"
+            },
+            {
+                "value": "6",
+                "operator": ">=",
+                "columnName": "l_linenumber"
+            }
+        ],
+        "FileName": "Generated_Query_92.sql",
+        "id": 84
+    },
+    {
+        "predicates": [
+            {
+                "value": "5690040",
+                "operator": "<=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "1993-07-15",
+                "operator": ">=",
+                "columnName": "l_receiptdate"
+            },
+            {
+                "value": "2",
+                "operator": ">=",
+                "columnName": "l_linenumber"
+            },
+            {
+                "value": "'MAIL'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            },
+            {
+                "value": "'R'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            },
+            {
+                "value": "1485",
+                "operator": "<=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "'F'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            },
+            {
+                "value": "10477",
+                "operator": ">=",
+                "columnName": "l_extendedprice"
+            },
+            {
+                "value": "18",
+                "operator": "<=",
+                "columnName": "l_quantity"
+            },
+            {
+                "value": "1998-02-06",
+                "operator": ">=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "'DELIVER IN PERSON'",
+                "operator": "=",
+                "columnName": "l_shipinstruct"
+            },
+            {
+                "value": "81934",
+                "operator": "<=",
+                "columnName": "l_partkey"
+            },
+            {
+                "value": "1996-05-30",
+                "operator": "<=",
+                "columnName": "l_commitdate"
+            }
+        ],
+        "FileName": "Generated_Query_93.sql",
+        "id": 85
+    },
+    {
+        "predicates": [
+            {
+                "value": "8655",
+                "operator": "<=",
+                "columnName": "l_suppkey"
+            },
+            {
+                "value": "182180",
+                "operator": ">=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "'FOB'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            },
+            {
+                "value": "175761",
+                "operator": "<=",
+                "columnName": "l_partkey"
+            },
+            {
+                "value": "1997-12-14",
+                "operator": ">=",
+                "columnName": "l_commitdate"
+            },
+            {
+                "value": "'O'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            },
+            {
+                "value": "4",
+                "operator": ">=",
+                "columnName": "l_linenumber"
+            },
+            {
+                "value": "7",
+                "operator": "<=",
+                "columnName": "l_quantity"
+            }
+        ],
+        "FileName": "Generated_Query_94.sql",
+        "id": 86
+    },
+    {
+        "predicates": [
+            {
+                "value": "1",
+                "operator": "<=",
+                "columnName": "l_linenumber"
+            },
+            {
+                "value": "'O'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            },
+            {
+                "value": "33879",
+                "operator": "<=",
+                "columnName": "l_extendedprice"
+            }
+        ],
+        "FileName": "Generated_Query_96.sql",
+        "id": 87
+    },
+    {
+        "predicates": [
+            {
+                "value": "'COLLECT COD'",
+                "operator": "=",
+                "columnName": "l_shipinstruct"
+            },
+            {
+                "value": "103253",
+                "operator": "<=",
+                "columnName": "l_partkey"
+            },
+            {
+                "value": "1",
+                "operator": ">=",
+                "columnName": "l_linenumber"
+            },
+            {
+                "value": "7",
+                "operator": ">=",
+                "columnName": "l_quantity"
+            },
+            {
+                "value": "4542647",
+                "operator": ">=",
+                "columnName": "l_orderkey"
+            }
+        ],
+        "FileName": "Generated_Query_97.sql",
+        "id": 88
+    },
+    {
+        "predicates": [
+            {
+                "value": "'F'",
+                "operator": "=",
+                "columnName": "l_linestatus"
+            },
+            {
+                "value": "'RAIL'",
+                "operator": "=",
+                "columnName": "l_shipmode"
+            },
+            {
+                "value": "1996-06-08",
+                "operator": "<=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "124755",
+                "operator": "<=",
+                "columnName": "l_partkey"
+            },
+            {
+                "value": "8163",
+                "operator": ">=",
+                "columnName": "l_suppkey"
+            }
+        ],
+        "FileName": "Generated_Query_98.sql",
+        "id": 89
+    },
+    {
+        "predicates": [
+            {
+                "value": "77529",
+                "operator": "<=",
+                "columnName": "l_extendedprice"
+            },
+            {
+                "value": "13",
+                "operator": ">=",
+                "columnName": "l_quantity"
+            },
+            {
+                "value": "1997-10-23",
+                "operator": ">=",
+                "columnName": "l_shipdate"
+            },
+            {
+                "value": "316206",
+                "operator": ">=",
+                "columnName": "l_orderkey"
+            },
+            {
+                "value": "2",
+                "operator": ">=",
+                "columnName": "l_linenumber"
+            },
+            {
+                "value": "'R'",
+                "operator": "=",
+                "columnName": "l_returnflag"
+            },
+            {
+                "value": "'DELIVER IN PERSON'",
+                "operator": "=",
+                "columnName": "l_shipinstruct"
+            }
+        ],
+        "FileName": "Generated_Query_99.sql",
+        "id": 90
+    }
+]
