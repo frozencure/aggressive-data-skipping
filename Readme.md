@@ -1,3 +1,28 @@
+# Overview
+
+This reporsitory contains a prototype implementation of the (Skipping Oriented Paritioning)[https://digitalassets.lib.berkeley.edu/etd/ucb/text/Sun_berkeley_0028E_17578.pdf] approach done by Sun et al. We provide a tool that can perform all the steps mentioned in the Sun's paper on a single table using
+Apache Spark.
+
+The implementation has been done by including a Java REST server developed with Spring Boot that comunicates with an Apache Livy server to submit Spark jobs.
+The REST server has the follwoing capabilities:
+* Parsing: contains a parsing module that can be used to extract the relveant information out of a set of historical queries from SQL scripts
+* Featurization: cotains a featurization module, which uses the parsed format of the queries (a JSON file) to create representative features that will be in turn used
+for the workload-driven partitioning
+* Augmentation: augmentation module which takes the features JSON file as input and creates a new column of feature vectors for the to-be partitioned table
+* Clustering: the clustering module uses the new column of the table and finds partitions by performing hierarchical clustering. In this step a new partioned table will be created
+* Evaluation: the evaluation module provides a query conversion tool that can convert the intial queries that have been used for workload analalysis to queries that can be used on the newly partitioned table. These queries are also able to skip non-relevant partitions.
+
+* Web interface: we have incorporated Swagger UI into our server meaning that every step mentioned above can be performed using a web interface
+
+
+Inside this project we also provide a nested project, `aggressive-data-skipping-evaluation`, which can be used to evaluate the Skipping-Oriented approach against other 
+approaches. This subproject provides tools for evaluating averge query execution time and amount of data tuples skipped. It can use both modified and normal queries for the evaluation. It runs directly on Spark using `spark-submit` and not trough Apache Livy, like the main project.
+
+
+
+
+
+
 # Running the project
 
 
