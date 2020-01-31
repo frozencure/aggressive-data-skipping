@@ -1,0 +1,1 @@
+SELECT * FROM skipping.withUnion WHERE l_shipmode='FOB' and l_shipinstruct='TAKE BACK RETURN' 

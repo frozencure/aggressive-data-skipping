@@ -1,0 +1,1 @@
+SELECT * FROM skipping.withUnion WHERE l_linenumber>=3 and l_returnflag='R' 

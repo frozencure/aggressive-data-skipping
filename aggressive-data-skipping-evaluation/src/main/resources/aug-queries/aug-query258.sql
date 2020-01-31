@@ -1,0 +1,1 @@
+SELECT * FROM skipping.withUnion WHERE l_quantity<=49 and l_shipinstruct='DELIVER IN PERSON' 

@@ -1,0 +1,1 @@
+SELECT * FROM skipping.withUnion WHERE l_shipmode='TRUCK' and l_shipinstruct='DELIVER IN PERSON' 

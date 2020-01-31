@@ -1,0 +1,1 @@
+SELECT * FROM skipping.withUnion WHERE unionVectors IN ('101111111111111', '101101110011110', '101111110111110', '111111110111111', '101111110011111', '101111110011110' ) and l_shipinstruct='TAKE BACK RETURN' and l_linestatus='O' and l_extendedprice>=82061 and l_shipdate<=DATE '1994-04-13' 

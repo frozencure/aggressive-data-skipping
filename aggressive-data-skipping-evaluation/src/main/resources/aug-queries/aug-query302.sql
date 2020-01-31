@@ -1,0 +1,1 @@
+SELECT * FROM skipping.withUnion WHERE l_linenumber>=1 and l_extendedprice<=88821 

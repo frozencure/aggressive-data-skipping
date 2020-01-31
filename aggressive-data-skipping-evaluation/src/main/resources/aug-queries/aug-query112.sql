@@ -1,0 +1,1 @@
+SELECT * FROM skipping.withUnion WHERE l_commitdate>=DATE '1993-12-18' and l_returnflag='N' 

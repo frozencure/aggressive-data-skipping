@@ -1,0 +1,1 @@
+SELECT * FROM skipping.withUnion WHERE l_returnflag='A' and l_shipdate<=DATE '1997-10-10' 
