@@ -1,0 +1,1 @@
+SELECT * FROM skipping.withUnion WHERE  l_extendedprice<=40988 and l_shipmode='SHIP' 

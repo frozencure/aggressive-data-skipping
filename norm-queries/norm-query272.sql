@@ -1,0 +1,1 @@
+SELECT * FROM skipping.withUnion WHERE  l_shipinstruct='DELIVER IN PERSON' and l_shipdate<=DATE '1996-05-05' 

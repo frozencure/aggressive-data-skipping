@@ -1,0 +1,1 @@
+SELECT * FROM skipping.withUnion WHERE  l_shipmode='REG AIR' and l_quantity<=25 and l_returnflag='R' 

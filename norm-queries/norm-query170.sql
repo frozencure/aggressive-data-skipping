@@ -1,0 +1,1 @@
+SELECT * FROM skipping.withUnion WHERE  l_extendedprice>=22386 and l_quantity<=47 

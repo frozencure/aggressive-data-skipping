@@ -1,0 +1,1 @@
+SELECT * FROM skipping.withUnion WHERE  l_extendedprice<=60852 and l_shipinstruct='COLLECT COD' 

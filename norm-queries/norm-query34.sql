@@ -1,0 +1,1 @@
+SELECT * FROM skipping.withUnion WHERE  l_receiptdate>=DATE '1994-03-03' and l_linenumber>=1 and l_returnflag='N' 

@@ -1,0 +1,1 @@
+SELECT * FROM skipping.withUnion WHERE  l_shipinstruct='TAKE BACK RETURN' and l_extendedprice<=103804 

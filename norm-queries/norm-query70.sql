@@ -1,0 +1,1 @@
+SELECT * FROM skipping.withUnion WHERE  l_returnflag='N' and l_extendedprice>=23218 

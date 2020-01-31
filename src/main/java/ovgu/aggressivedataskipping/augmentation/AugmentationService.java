@@ -19,12 +19,15 @@ public class AugmentationService {
         this.client = client;
     }
 
-    public long testAugmentation(String featuresPath) throws ExecutionException, InterruptedException, FileNotFoundException {
+    public long augmentVectors(String featuresPath, String databaseName,
+                               String fromTableName, String newTableName, String newColumnName,
+                               int firstFeatureId, int batchSize, boolean isFromOld)
+            throws ExecutionException, InterruptedException, FileNotFoundException {
         FeatureReader reader = new FeatureReader(featuresPath);
         FeatureSet featureSet = reader.readFeatures();
         List<String> featuresAsConditions = featureSet.getFeatures()
                 .stream().map(Feature::getFeatureAsCondition).collect(Collectors.toList());
-        return client.getLivyClient().submit(new AugmentationJob(featuresAsConditions)).get();
+        return client.getLivyClient().submit(new AugmentationJob(featuresAsConditions, databaseName, fromTableName,
+                newTableName, newColumnName, firstFeatureId, batchSize, isFromOld)).get();
     }
-
 }

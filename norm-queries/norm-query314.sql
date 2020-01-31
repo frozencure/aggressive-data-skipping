@@ -1,0 +1,1 @@
+SELECT * FROM skipping.withUnion WHERE  l_receiptdate<=DATE '1994-12-29' and l_linenumber>=5 and l_shipmode='FOB' 

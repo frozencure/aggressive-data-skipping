@@ -1,0 +1,1 @@
+SELECT * FROM skipping.withUnion WHERE  l_shipdate>=DATE '1996-03-06' and l_shipinstruct='TAKE BACK RETURN' 

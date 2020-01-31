@@ -13,7 +13,7 @@ public class CostMatrixCell {
 
     private List<Boolean> secondVector;
 
-    private Integer cost;
+    private Long cost;
 
 
     public List<Boolean> getFirstVector() {
@@ -24,12 +24,12 @@ public class CostMatrixCell {
         return secondVector;
     }
 
-    public Integer getCost() {
+    public Long getCost() {
         return cost;
     }
 
 
-    public void setCost(Integer cost) {
+    public void setCost(Long cost) {
         this.cost = cost;
     }
 }

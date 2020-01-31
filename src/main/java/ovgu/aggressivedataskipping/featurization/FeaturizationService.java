@@ -20,32 +20,26 @@ public class FeaturizationService {
         QuerySet querySet = readQueries(queriesFile);
         Set<Predicate> allPredicates = querySet.getAllPredicates();
         List<Query> allQueries = querySet.getQueries();
-        allPredicates.forEach(p -> {
-            allQueries.forEach(q -> {
-                Predicate toAddPredicate = null;
-                for (Predicate qp :
-                        q.getPredicates()) {
-                    if (qp.isSubsumed(p)) {
-                        toAddPredicate = p;
-                        break;
+        for (Query query : allQueries) {
+            Set<Predicate> toAdd = new HashSet<>();
+            for(Predicate pred : allPredicates) {
+                for(Predicate qPred : query.getPredicates()) {
+                    if(qPred.isSubsumed(pred)) {
+                        toAdd.add(pred);
                     }
                 }
-                if(toAddPredicate != null) {
-                    if(!q.getPredicates().contains(toAddPredicate)) {
-                        q.getPredicates().add(toAddPredicate);
-                    }
-                }
-            });
-        });
+            }
+            query.getPredicates().addAll(toAdd);
+        }
         return querySet;
     }
 
-    public FeatureSet getFrequentItemSets(Set<Query> queries, int support) {
+    public FeatureSet getFrequentItemSets(Set<Query> queries, int support, int stopEarlyLimit) {
         Set<Set<Predicate>> transactions = queries.stream().map(q -> new HashSet<>(q.getPredicates())).collect(Collectors.toSet());
-        AprioriMiner<Predicate> miner = new AprioriMiner<>(transactions, support);
+        AprioriMiner<Predicate> miner = new AprioriMiner<>(transactions, support, stopEarlyLimit);
         Map<Set<Predicate>, Integer> frequentItemSets = miner.getFrequentItemSets();
         List<Feature> frequentItems = frequentItemSets.keySet()
-                .stream().map(s -> new Feature(new ArrayList<>(s), frequentItemSets.get(s))).collect(Collectors.toList());
+                .stream().map(s -> new Feature(new HashSet<>(s), frequentItemSets.get(s))).collect(Collectors.toList());
         return new FeatureSet(frequentItems);
     }
 
@@ -53,5 +47,17 @@ public class FeaturizationService {
         WorkloadWriter wr = new WorkloadWriter();
         wr.writeQueries(featureSet, output);
     }
+
+    public static boolean isSubsumed(Set<Predicate> isSubsumedList, Set<Predicate> subsumedByList) {
+        for (Predicate subsumedByPredicate : subsumedByList) {
+            for (Predicate isSubsumedPredicate : isSubsumedList) {
+                if (isSubsumedPredicate.isSubsumed(subsumedByPredicate)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
 
 }

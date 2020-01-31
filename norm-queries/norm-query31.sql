@@ -1,0 +1,1 @@
+SELECT * FROM skipping.withUnion WHERE  l_shipmode='REG AIR' and l_shipdate<=DATE '1998-05-15' 

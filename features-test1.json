@@ -1,0 +1,154 @@
+{
+    "features": [
+        {
+            "predicates": [
+                {
+                    "columnName": "l_receiptdate",
+                    "operator": ">=",
+                    "value": "1992-04-19"
+                }
+            ],
+            "frequency": 25
+        },
+        {
+            "predicates": [
+                {
+                    "columnName": "l_linestatus",
+                    "operator": "=",
+                    "value": "'F'"
+                }
+            ],
+            "frequency": 25
+        },
+        {
+            "predicates": [
+                {
+                    "columnName": "l_receiptdate",
+                    "operator": "<=",
+                    "value": "1998-11-01"
+                }
+            ],
+            "frequency": 24
+        },
+        {
+            "predicates": [
+                {
+                    "columnName": "l_extendedprice",
+                    "operator": ">=",
+                    "value": "33976"
+                }
+            ],
+            "frequency": 21
+        },
+        {
+            "predicates": [
+                {
+                    "columnName": "l_extendedprice",
+                    "operator": "<=",
+                    "value": "87182"
+                }
+            ],
+            "frequency": 20
+        },
+        {
+            "predicates": [
+                {
+                    "columnName": "l_linestatus",
+                    "operator": "=",
+                    "value": "'O'"
+                }
+            ],
+            "frequency": 18
+        },
+        {
+            "predicates": [
+                {
+                    "columnName": "l_quantity",
+                    "operator": ">=",
+                    "value": "23"
+                }
+            ],
+            "frequency": 17
+        },
+        {
+            "predicates": [
+                {
+                    "columnName": "l_shipdate",
+                    "operator": "<=",
+                    "value": "1995-12-27"
+                }
+            ],
+            "frequency": 17
+        },
+        {
+            "predicates": [
+                {
+                    "columnName": "l_shipdate",
+                    "operator": ">=",
+                    "value": "1995-12-16"
+                }
+            ],
+            "frequency": 15
+        },
+        {
+            "predicates": [
+                {
+                    "columnName": "l_quantity",
+                    "operator": "<=",
+                    "value": "24"
+                }
+            ],
+            "frequency": 14
+        },
+        {
+            "predicates": [
+                {
+                    "columnName": "l_quantity",
+                    "operator": "<=",
+                    "value": "46"
+                }
+            ],
+            "frequency": 14
+        },
+        {
+            "predicates": [
+                {
+                    "columnName": "l_quantity",
+                    "operator": ">=",
+                    "value": "4"
+                }
+            ],
+            "frequency": 14
+        },
+        {
+            "predicates": [
+                {
+                    "columnName": "l_commitdate",
+                    "operator": ">=",
+                    "value": "1994-01-08"
+                }
+            ],
+            "frequency": 14
+        },
+        {
+            "predicates": [
+                {
+                    "columnName": "l_commitdate",
+                    "operator": "<=",
+                    "value": "1998-04-10"
+                }
+            ],
+            "frequency": 14
+        },
+        {
+            "predicates": [
+                {
+                    "columnName": "l_linenumber",
+                    "operator": ">=",
+                    "value": "4"
+                }
+            ],
+            "frequency": 13
+        }
+    ]
+}

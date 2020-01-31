@@ -1,0 +1,1 @@
+SELECT * FROM skipping.withUnion WHERE  l_shipdate>=DATE '1992-12-19' and l_quantity>=14 

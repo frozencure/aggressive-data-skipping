@@ -1,0 +1,1 @@
+SELECT * FROM skipping.withUnion WHERE  l_extendedprice>=83403 and l_shipmode='RAIL' and l_returnflag='N' 

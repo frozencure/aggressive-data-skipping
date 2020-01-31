@@ -1,0 +1,1 @@
+SELECT * FROM skipping.withUnion WHERE  l_shipinstruct='DELIVER IN PERSON' and l_commitdate<=DATE '1993-10-24' and l_quantity>=34 

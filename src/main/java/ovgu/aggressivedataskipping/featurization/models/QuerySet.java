@@ -20,7 +20,9 @@ public class QuerySet {
         Set<Predicate> predicates = new HashSet<>();
         for (Query query : queries
         ) {
-            predicates.addAll(query.getPredicates());
+            for(Predicate pred : query.getPredicates()) {
+                predicates.add(pred);
+            }
         }
         return predicates;
     }

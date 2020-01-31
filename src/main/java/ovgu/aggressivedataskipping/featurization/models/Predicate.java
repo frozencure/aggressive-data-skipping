@@ -1,5 +1,8 @@
 package ovgu.aggressivedataskipping.featurization.models;
 
+import org.apache.hadoop.yarn.webapp.hamlet.Hamlet;
+
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.Objects;
 import java.util.Set;
@@ -89,6 +92,10 @@ public class Predicate {
     }
 
     public String getAsCondition() {
+        try {
+            LocalDate.parse(value);
+            value = "DATE '" + value + "'";
+        } catch (Exception e) {}
         return columnName + operator + value;
     }
 }

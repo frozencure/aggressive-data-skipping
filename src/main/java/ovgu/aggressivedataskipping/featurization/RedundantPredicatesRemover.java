@@ -18,16 +18,19 @@ public class RedundantPredicatesRemover {
 
     Integer support;
 
-    public RedundantPredicatesRemover(List<Feature> features, Set<Query> queries, Integer support) {
+    int maxFeatures;
+
+    public RedundantPredicatesRemover(List<Feature> features, Set<Query> queries, Integer support, int maxFeatures) {
         this.features = features;
         this.queries = queries;
         this.support = support;
+        this.maxFeatures = maxFeatures;
     }
 
     private Set<Query> getSubsumedQueries(Feature feature) {
         Set<Query> subsumedQueries = new HashSet<>();
         for (Query query : queries) {
-            if (isSubsumed(query.getPredicates(), feature.getPredicates())) {
+            if (FeaturizationService.isSubsumed(query.getPredicates(), feature.getPredicates())) {
                 subsumedQueries.add(query);
             }
         }
@@ -53,17 +56,6 @@ public class RedundantPredicatesRemover {
         else if(subsumes && !subsumed) return 1;
         else if(!subsumes && subsumed) return -1;
         return 0;
-//        for (Predicate subsumesPredicate : subsumesFeature.getPredicates()) {
-//            boolean subsumes = false;
-//            for (Predicate subsumedPredicate : subsumedFeature.getPredicates()) {
-//                if (subsumedPredicate.isSubsumed(subsumesPredicate)) {
-//                    subsumes = true;
-//                    break;
-//                }
-//            }
-//            if (subsumes) return 1;
-//        }
-//        return -1;
     }
 
 
@@ -74,26 +66,16 @@ public class RedundantPredicatesRemover {
         for (Feature feature : sortedFeatures) {
             Set<Query> subsumedQueries = getSubsumedQueries(feature);
             int numberOfAditionalQueries = Sets.difference(subsumedQueries, finalSubsumedQueries).size();
+            if(finalSubsumedQueries.size() > queries.size() - support) break;
             if (numberOfAditionalQueries >= support) {
                 finalSubsumedQueries.addAll(subsumedQueries);
                 feature.setFrequency(numberOfAditionalQueries);
                 finalFeatures.add(feature);
             }
+            if(finalFeatures.size() >= maxFeatures) break;
         }
         return finalFeatures.stream()
                 .sorted((a, b) -> b.getFrequency().compareTo(a.getFrequency())).collect(Collectors.toList());
     }
-
-    private boolean isSubsumed(List<Predicate> isSubsumedList, List<Predicate> subsumedByList) {
-        for (Predicate subsumedByPredicate : subsumedByList) {
-            for (Predicate isSubsumedPredicate : isSubsumedList) {
-                if (isSubsumedPredicate.isSubsumed(subsumedByPredicate)) {
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
-
 
 }

@@ -1,0 +1,1 @@
+SELECT * FROM skipping.withUnion WHERE  l_receiptdate<=DATE '1994-06-01' and l_shipmode='TRUCK' and l_linenumber>=1 

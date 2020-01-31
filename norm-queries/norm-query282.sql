@@ -1,0 +1,1 @@
+SELECT * FROM skipping.withUnion WHERE  l_quantity>=41 and l_linestatus='F' 

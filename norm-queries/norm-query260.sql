@@ -1,0 +1,1 @@
+SELECT * FROM skipping.withUnion WHERE  l_shipdate<=DATE '1992-11-09' and l_receiptdate<=DATE '1995-12-19' 

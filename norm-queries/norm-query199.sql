@@ -1,0 +1,1 @@
+SELECT * FROM skipping.withUnion WHERE  l_extendedprice<=61361 and l_shipdate<=DATE '1993-04-26' 

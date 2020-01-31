@@ -1,0 +1,1 @@
+SELECT * FROM skipping.withUnion WHERE  l_quantity>=19 and l_returnflag='N' 

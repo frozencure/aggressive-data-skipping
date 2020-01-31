@@ -1,0 +1,1 @@
+SELECT * FROM skipping.withUnion WHERE  l_shipdate<=DATE '1997-01-07' and l_linestatus='F' 

@@ -20,9 +20,17 @@ public class AugmentationController {
     }
 
     @GetMapping("/test")
-    public long augmentationTest(@RequestParam(value = "featuresPath") String featuresPath) throws ExecutionException,
+    public long augmentationTest(@RequestParam(value = "featuresPath") String featuresPath,
+                                 @RequestParam(value = "database") String databaseName,
+                                 @RequestParam(value = "new table") String newTableName,
+                                 @RequestParam(value = "old table") String oldTableName,
+                                 @RequestParam(value = "vector column name") String vectorColumn,
+                                 @RequestParam(value = "First feature id") int firstFeatureId,
+                                 @RequestParam(value = "Batch size") int batchSize,
+                                 @RequestParam(value = "From old table") boolean isFromOld) throws ExecutionException,
             InterruptedException, FileNotFoundException {
-        return augmentationService.testAugmentation(featuresPath);
+        return augmentationService.augmentVectors(featuresPath, databaseName, oldTableName, newTableName, vectorColumn,
+                firstFeatureId, batchSize, isFromOld);
     }
 
 

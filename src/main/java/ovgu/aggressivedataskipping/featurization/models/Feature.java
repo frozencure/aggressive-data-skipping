@@ -2,14 +2,15 @@ package ovgu.aggressivedataskipping.featurization.models;
 
 import java.util.ArrayList;
 import java.util.Objects;
+import java.util.Set;
 
 public class Feature {
 
-    private ArrayList<Predicate> predicates;
+    private Set<Predicate> predicates;
 
     private Integer frequency;
 
-    public Feature(ArrayList<Predicate> predicates, Integer frequency) {
+    public Feature(Set<Predicate> predicates, Integer frequency) {
         this.predicates = predicates;
         this.frequency = frequency;
     }
@@ -28,7 +29,7 @@ public class Feature {
         return true;
     }
 
-    public ArrayList<Predicate> getPredicates() {
+    public Set<Predicate> getPredicates() {
         return predicates;
     }
 

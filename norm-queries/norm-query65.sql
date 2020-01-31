@@ -1,0 +1,1 @@
+SELECT * FROM skipping.withUnion WHERE  l_quantity>=8 and l_receiptdate<=DATE '1992-10-08' 

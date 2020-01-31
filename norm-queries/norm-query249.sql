@@ -1,0 +1,1 @@
+SELECT * FROM skipping.withUnion WHERE  l_commitdate<=DATE '1995-10-19' and l_linestatus='F' 

@@ -1,10 +1,8 @@
 package ovgu.aggressivedataskipping.clustering;
 
 import com.google.common.collect.Streams;
-import org.apache.commons.math3.util.Pair;
 
 import java.util.*;
-import java.util.function.BiFunction;
 import java.util.stream.Collectors;
 
 public class ClusteringMain {
@@ -25,20 +23,20 @@ public class ClusteringMain {
 //        List<Boolean> sixthList = Arrays.asList(sixth);
 //        List<Boolean> seventhList = Arrays.asList(third);
 
-        Map<List<Boolean>, Integer> vectors = new HashMap<>();
+        Map<List<Boolean>, Long> vectors = new HashMap<>();
         List<Integer> weightsList = Arrays.asList(weights);
-        vectors.put(firstList, 2);
-        vectors.put(secondList, 3);
-        vectors.put(thirdList, 1);
-        vectors.put(fourthList, 1);
-        vectors.put(fifthList, 1);
+        vectors.put(firstList, 2L);
+        vectors.put(secondList, 3L);
+        vectors.put(thirdList, 1L);
+        vectors.put(fourthList, 1L);
+        vectors.put(fifthList, 1L);
 //        vectors.put(sixthList, 1);
 
 
 //        List<Boolean> unionVector = vectors.stream().reduce(ClusteringMain::union).orElse(new ArrayList<>());
-        ClusteringService service = new ClusteringService(vectors, weightsList, 100);
+        HaClusterer service = new HaClusterer(vectors, weightsList, 5);
         service.mergePartitions();
-        System.out.println(service.getVectorWithUnionVector());
+        System.out.println(service.getVectorsWithBlockingVector());
     }
 
     private static List<Boolean> union(List<Boolean> first, List<Boolean> second) {

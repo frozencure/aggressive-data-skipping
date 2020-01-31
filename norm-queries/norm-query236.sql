@@ -1,0 +1,1 @@
+SELECT * FROM skipping.withUnion WHERE  l_extendedprice<=58147 and l_commitdate>=DATE '1998-03-26' and l_quantity<=46 

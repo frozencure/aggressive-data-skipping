@@ -1,0 +1,1 @@
+SELECT * FROM skipping.withUnion WHERE  l_quantity<=7 and l_shipinstruct='TAKE BACK RETURN' and l_receiptdate>=DATE '1994-07-10' and l_linenumber<=5 

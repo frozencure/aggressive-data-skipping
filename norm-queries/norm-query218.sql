@@ -1,0 +1,1 @@
+SELECT * FROM skipping.withUnion WHERE  l_commitdate<=DATE '1994-12-21' and l_quantity>=11 

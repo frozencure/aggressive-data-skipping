@@ -1,0 +1,1 @@
+SELECT * FROM skipping.withUnion WHERE  l_quantity>=1 and l_shipinstruct='TAKE BACK RETURN' 

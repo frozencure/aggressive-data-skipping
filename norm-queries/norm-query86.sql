@@ -1,0 +1,1 @@
+SELECT * FROM skipping.withUnion WHERE  l_shipmode='RAIL' and l_receiptdate>=DATE '1998-11-11' 

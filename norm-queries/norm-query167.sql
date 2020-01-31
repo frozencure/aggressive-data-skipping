@@ -1,0 +1,1 @@
+SELECT * FROM skipping.withUnion WHERE  l_commitdate>=DATE '1996-01-29' and l_receiptdate>=DATE '1997-04-10' 

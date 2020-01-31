@@ -25,12 +25,17 @@ public class FeaturizationController {
     @Autowired
     private FeaturizationService service;
 
-    @GetMapping("/features")
-    public void readQueries(@RequestParam String queriesPath, @RequestParam String outputPath, int support) {
+    @GetMapping("/create-features")
+    public void readQueries(@RequestParam String queriesPath,
+                            @RequestParam String outputPath,
+                            @RequestParam int support,
+                            @RequestParam int stopEarlyLimit,
+                            @RequestParam int maxNumberOfFeatures) {
         try {
             QuerySet queries = service.augmentQueries(queriesPath);
-            FeatureSet featureSet = service.getFrequentItemSets(new HashSet<>(queries.getQueries()), support);
-            RedundantPredicatesRemover remover = new RedundantPredicatesRemover(featureSet.getFeatures(), new HashSet<>(queries.getQueries()), 4);
+            FeatureSet featureSet = service.getFrequentItemSets(new HashSet<>(queries.getQueries()), support, stopEarlyLimit);
+            RedundantPredicatesRemover remover = new RedundantPredicatesRemover(featureSet.getFeatures(),
+                    new HashSet<>(queries.getQueries()), support, maxNumberOfFeatures);
             FeatureSet features = new FeatureSet(remover.removeRedundantFeatures());
             service.writeQueriesToFile(features, outputPath);
         } catch (FileNotFoundException e) {

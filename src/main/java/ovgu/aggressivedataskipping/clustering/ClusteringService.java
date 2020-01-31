@@ -1,119 +1,98 @@
 package ovgu.aggressivedataskipping.clustering;
 
-import com.google.common.collect.Lists;
-import com.google.common.collect.Streams;
-import org.apache.commons.math3.util.Pair;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+import org.apache.arrow.flatbuf.Bool;
+import org.apache.spark.api.java.JavaRDD;
+import org.apache.spark.sql.Dataset;
+import org.apache.spark.sql.Row;
+import org.springframework.stereotype.Service;
+import ovgu.aggressivedataskipping.augmentation.AugmentationJob;
+import ovgu.aggressivedataskipping.augmentation.FeatureReader;
+import ovgu.aggressivedataskipping.featurization.models.Feature;
+import ovgu.aggressivedataskipping.featurization.models.FeatureSet;
+import ovgu.aggressivedataskipping.livy.LivyClientWrapper;
+import scala.Tuple2;
 
-import java.util.*;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ExecutionException;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
+@Service
 public class ClusteringService {
 
-    private Map<List<Boolean>, List<Boolean>> vectorWithUnionVector;
+    final LivyClientWrapper client;
 
-    private Map<List<Boolean>, Integer> currentPartitions;
+    private static final char TRUE_KEY = '1';
+    private static final char FALSE_KEY = '0';
 
-    private Map<Integer, Integer> featuresCosts;
+    public ClusteringService(LivyClientWrapper client) {
+        this.client = client;
+    }
 
-    private Integer minimumParitionSize;
+    public void partitionTable(String featuresPath, String databaseName, String tableName, String columnName, int limit)
+            throws ExecutionException, InterruptedException, FileNotFoundException {
+        FeatureReader reader = new FeatureReader(featuresPath);
+        FeatureSet featureSet = reader.readFeatures();
+        List<Integer> featureWeights = getFeatureWeights(featureSet);
+        Tuple2<String, Long>[] featureVectors = client.getLivyClient()
+                .submit(new ClusteringReadJob(tableName, databaseName, columnName)).get();
+        Map<List<Boolean>, Long> booleanFeatureVectors = convertToBoolean(featureVectors);
+        HaClusterer clusterer = new HaClusterer(booleanFeatureVectors, featureWeights, limit);
+        clusterer.mergePartitions();
+        Map<List<Boolean>, List<Boolean>> blockingVectors = clusterer.getVectorsWithBlockingVector();
+        List<Tuple2<String, String>> blockingVectorTuples = blockingVectorsToTuples(blockingVectors);
+        client.getLivyClient()
+                .submit(new ClusteringWriteJob(blockingVectorTuples, tableName, databaseName, columnName)).get();
+    }
 
-    public ClusteringService(Map<List<Boolean>, Integer> vectorsWithCounts, List<Integer> featureCosts, int minimumParitionSize) {
-        this.vectorWithUnionVector = new HashMap<>();
-        vectorsWithCounts.keySet().forEach(v -> vectorWithUnionVector.put(v,v));
-        this.currentPartitions = new HashMap<>();
-        vectorsWithCounts.keySet().forEach(v -> currentPartitions.put(v, vectorsWithCounts.get(v)));
-        this.minimumParitionSize = minimumParitionSize;
-        this.featuresCosts = new HashMap<>();
-        for (int i = 0; i < featureCosts.size(); i++) {
-            this.featuresCosts.put(i, featureCosts.get(i));
+    private Map<List<Boolean>, Long> convertToBoolean(Tuple2<String, Long>[] tuples) {
+        Map<List<Boolean>, Long> map = new HashMap<>();
+        for (Tuple2<String, Long> tuple : tuples) {
+            char[] chars = tuple._1.toCharArray();
+            List<Boolean> booleanArray = new ArrayList<>();
+            for (char aChar : chars) {
+                if (aChar == TRUE_KEY) booleanArray.add(true);
+                else booleanArray.add(false);
+            }
+            map.put(booleanArray, tuple._2);
         }
+        return map;
     }
 
-    public Map<List<Boolean>, List<Boolean>> getVectorWithUnionVector() {
-        return vectorWithUnionVector;
+    private List<Tuple2<String, String>> blockingVectorsToTuples(Map<List<Boolean>, List<Boolean>> blockingVectors) {
+        List<Tuple2<String, String>> tuples = new ArrayList<>();
+        for(List<Boolean> blockingVectorKey : blockingVectors.keySet()) {
+            String key = vectorToString(blockingVectorKey);
+            String value = vectorToString(blockingVectors.get(blockingVectorKey));
+            Tuple2<String, String> tuple = new Tuple2<>(key, value);
+            tuples.add(tuple);
+        }
+        return tuples;
     }
 
-    public Map<List<Boolean>, Integer> getCurrentPartitions() {
-        return currentPartitions;
-    }
-
-    private Integer computeCost(List<Boolean> vector) {
-        int totalCost = 0;
-        for(int i=0; i<vector.size(); i++) {
-            boolean bit = vector.get(i);
-            if(!bit) {
-                totalCost += featuresCosts.get(i);
+    private String vectorToString(List<Boolean> vector) {
+        StringBuilder result = new StringBuilder();
+        for(boolean bit: vector) {
+            if (bit) {
+                result.append(TRUE_KEY);
+            } else {
+                result.append(FALSE_KEY);
             }
         }
-        return totalCost;
+        return result.toString();
     }
 
-    private Integer computePartitionSize(CostMatrixCell cell) {
-        int firstPartitionSize = currentPartitions.get(cell.getFirstVector());
-        int secondPartitionSize = currentPartitions.get(cell.getSecondVector());
-        return (firstPartitionSize + secondPartitionSize);
+
+    private List<Integer> getFeatureWeights(FeatureSet featureSet) {
+        return featureSet.getFeatures()
+                .stream().map(Feature::getFrequency).collect(Collectors.toList());
     }
 
-    private Integer computePartitionCost(CostMatrixCell cell) {
-        List<Boolean> unionVector = computeUnionVector(cell.getFirstVector(), cell.getSecondVector());
-        return computePartitionSize(cell) * computeCost(unionVector);
-    }
 
-    private List<CostMatrixCell> computeCostMatrix() {
-        List<List<Boolean>> currentPartitionsSet = new ArrayList<>(currentPartitions.keySet());
-        List<CostMatrixCell> cells = new ArrayList<>();
-        for(int i=0; i<currentPartitions.size(); i++) {
-            for(int j=i+1; j<currentPartitions.size(); j++) {
-                CostMatrixCell cell = new CostMatrixCell(currentPartitionsSet.get(i), currentPartitionsSet.get(j));
-                cell.setCost(computePartitionCost(cell));
-                cells.add(cell);
-            }
-        }
-        return cells;
-    }
-
-    private CostMatrixCell selectPartitionsForMerge(List<CostMatrixCell> cells) {
-        return cells.stream().max(Comparator.comparing(CostMatrixCell::getCost)).get();
-    }
-
-    public void mergePartitions() {
-        while(currentPartitions.size() > 1) {
-            List<CostMatrixCell> cells = computeCostMatrix();
-            CostMatrixCell partitionsToMerge = selectPartitionsForMerge(cells);
-            int partitionSize = computePartitionSize(partitionsToMerge);
-            // 1: get partitions to merge
-            // 2: compute union vector for partions
-            // 3: search for vectors (values) in vectorWithUnionVector and update the union vectors (value)
-//        CostMatrixCell costMatrixCell = new CostMatrixCell();
-//        int firstSize = currentPartitions.get(costMatrixCell.getFirstVector());
-//        int secondSize = currentPartitions.get(costMatrixCell.getSecondVector());
-            // 4: compute size of new partition: firstSize + secondSize
-            // 5: remove the old partitions:
-            List<Boolean> unionVector = computeUnionVector(partitionsToMerge.getFirstVector(), partitionsToMerge.getSecondVector());
-            currentPartitions.remove(partitionsToMerge.getFirstVector());
-            currentPartitions.remove(partitionsToMerge.getSecondVector());
-            vectorWithUnionVector
-                    .put(partitionsToMerge.getFirstVector(), unionVector);
-            vectorWithUnionVector
-                    .put(partitionsToMerge.getSecondVector(), unionVector);
-            if (partitionSize <= minimumParitionSize) {
-                vectorWithUnionVector
-                        .put(partitionsToMerge.getFirstVector(), unionVector);
-                vectorWithUnionVector
-                        .put(partitionsToMerge.getSecondVector(), unionVector);
-                currentPartitions.put(unionVector, partitionSize);
-            }
-            System.out.println(currentPartitions.toString());
-            // 6: check if new size < minSize:
-            //              add new partition to current partitions
-            // stopping condition: if current partions size < 2
-        }
-    }
-
-    private List<Boolean> computeUnionVector(List<Boolean> firstPartition, List<Boolean> secondPartition) {
-        return Streams.zip(firstPartition.stream(), secondPartition.stream(), (a,b) -> a || b).collect(Collectors.toList());
-    }
 
 
 }

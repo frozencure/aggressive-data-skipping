@@ -1,0 +1,1 @@
+SELECT * FROM skipping.withUnion WHERE  l_commitdate<=DATE '1995-10-11' and l_shipinstruct='COLLECT COD' 
