@@ -1,6 +1,6 @@
 # Overview
 
-This reporsitory contains a prototype implementation of the (Skipping Oriented Paritioning)[https://digitalassets.lib.berkeley.edu/etd/ucb/text/Sun_berkeley_0028E_17578.pdf] approach done by Sun et al. We provide a tool that can perform all the steps mentioned in the Sun's paper on a single table using
+This reporsitory contains a prototype implementation of the [Skipping Oriented Paritioning](https://digitalassets.lib.berkeley.edu/etd/ucb/text/Sun_berkeley_0028E_17578.pdf) approach done by Sun et al. We provide a tool that can perform all the steps mentioned in the Sun's paper on a single table using
 Apache Spark.
 
 The implementation has been done by including a Java REST server developed with Spring Boot that comunicates with an Apache Livy server to submit Spark jobs.
