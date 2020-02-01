@@ -1,11 +1,6 @@
 package ovgu.aggressivedataskipping.clustering;
 
-import org.apache.arrow.flatbuf.Bool;
-import org.apache.spark.api.java.JavaRDD;
-import org.apache.spark.sql.Dataset;
-import org.apache.spark.sql.Row;
 import org.springframework.stereotype.Service;
-import ovgu.aggressivedataskipping.augmentation.AugmentationJob;
 import ovgu.aggressivedataskipping.augmentation.FeatureReader;
 import ovgu.aggressivedataskipping.featurization.models.Feature;
 import ovgu.aggressivedataskipping.featurization.models.FeatureSet;
@@ -19,7 +14,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 @Service
 public class ClusteringService {
@@ -33,7 +27,8 @@ public class ClusteringService {
         this.client = client;
     }
 
-    public void partitionTable(String featuresPath, String databaseName, String tableName, String columnName, int limit)
+    public void partitionTable(String featuresPath, String databaseName, String tableName, String columnName, int limit,
+                               String newTableName, String blockVectorColumnName)
             throws ExecutionException, InterruptedException, FileNotFoundException {
         FeatureReader reader = new FeatureReader(featuresPath);
         FeatureSet featureSet = reader.readFeatures();
@@ -46,7 +41,8 @@ public class ClusteringService {
         Map<List<Boolean>, List<Boolean>> blockingVectors = clusterer.getVectorsWithBlockingVector();
         List<Tuple2<String, String>> blockingVectorTuples = blockingVectorsToTuples(blockingVectors);
         client.getLivyClient()
-                .submit(new ClusteringWriteJob(blockingVectorTuples, tableName, databaseName, columnName)).get();
+                .submit(new ClusteringWriteJob(blockingVectorTuples, tableName,
+                        databaseName, columnName, newTableName, blockVectorColumnName)).get();
     }
 
     private Map<List<Boolean>, Long> convertToBoolean(Tuple2<String, Long>[] tuples) {
@@ -65,7 +61,7 @@ public class ClusteringService {
 
     private List<Tuple2<String, String>> blockingVectorsToTuples(Map<List<Boolean>, List<Boolean>> blockingVectors) {
         List<Tuple2<String, String>> tuples = new ArrayList<>();
-        for(List<Boolean> blockingVectorKey : blockingVectors.keySet()) {
+        for (List<Boolean> blockingVectorKey : blockingVectors.keySet()) {
             String key = vectorToString(blockingVectorKey);
             String value = vectorToString(blockingVectors.get(blockingVectorKey));
             Tuple2<String, String> tuple = new Tuple2<>(key, value);
@@ -76,7 +72,7 @@ public class ClusteringService {
 
     private String vectorToString(List<Boolean> vector) {
         StringBuilder result = new StringBuilder();
-        for(boolean bit: vector) {
+        for (boolean bit : vector) {
             if (bit) {
                 result.append(TRUE_KEY);
             } else {
@@ -91,8 +87,6 @@ public class ClusteringService {
         return featureSet.getFeatures()
                 .stream().map(Feature::getFrequency).collect(Collectors.toList());
     }
-
-
 
 
 }

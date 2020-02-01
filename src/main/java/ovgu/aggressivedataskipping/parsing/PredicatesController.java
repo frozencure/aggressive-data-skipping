@@ -18,11 +18,13 @@ import java.io.IOException;
 public class PredicatesController {
 
     @GetMapping("/parse")
-    @ApiOperation(value = "Parse multiple SQL SELECT scripts given the path to the folder and a table restriction",
+    @ApiOperation(value = "Parse multiple SQL SELECT scripts given the path to the folder and a table restriction. " +
+            "This function will extract all the filters fromt he WHERE clause of each query and save them in JSON format.",
             response = String.class)
     public String parseQueries(@ApiParam(value = "Path to the SQL scripts folder") @RequestParam String input,
-                               @ApiParam(value = "Path and name of the output file") @RequestParam String output,
-                               @ApiParam(value = "The table restriction for the queries") @RequestParam String table) {
+                               @ApiParam(value = "Path and name of the output file. Must be a JSON file.") @RequestParam String output,
+                               @ApiParam(value = "The table restriction for the queries. Only queries from this table will be parsed")
+                                   @RequestParam String table) {
         QueryParser parser = new QueryParser(input, output, table);
         try {
             return parser.exportPredicatesToJson();

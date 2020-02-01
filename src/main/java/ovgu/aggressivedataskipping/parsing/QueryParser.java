@@ -23,6 +23,9 @@ import java.util.Collections;
 import java.util.Hashtable;
 import java.util.List;
 
+/**
+ * Class that is responsible with extracting filter conditions form SQL SELECT scripts
+ */
 public class QueryParser {
 
     private static final String COLUMN_NAME_KEY = "columnName";
